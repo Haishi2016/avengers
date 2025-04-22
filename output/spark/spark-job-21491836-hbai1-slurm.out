@@ -1,0 +1,58 @@
+🐍 Python: /home/hbai1/.conda/envs/sparkxgb/bin/python
+✅ XGBoost is available!
+Picked up _JAVA_OPTIONS: -Xmx2048m
+Picked up _JAVA_OPTIONS: -Xmx2048m
+:: loading settings :: url = jar:file:/umbc/rs/is789sp25/common/software/spark-3.5.0-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /home/hbai1/.ivy2/cache
+The jars for the packages stored in: /home/hbai1/.ivy2/jars
+org.apache.spark#spark-sql_2.12 added as a dependency
+ml.dmlc#xgboost4j-spark_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-cf6ca845-09c4-43b6-9be3-c8da7dfd330d;1.0
+	confs: [default]
+	found ml.dmlc#xgboost4j-spark_2.12;1.6.1 in central
+	found ml.dmlc#xgboost4j_2.12;1.6.1 in central
+	found com.typesafe.akka#akka-actor_2.12;2.5.23 in central
+	found com.typesafe#config;1.3.3 in central
+	found org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 in central
+	found com.esotericsoftware#kryo;4.0.2 in central
+	found com.esotericsoftware#reflectasm;1.11.3 in central
+	found org.ow2.asm#asm;5.0.4 in central
+	found com.esotericsoftware#minlog;1.3.0 in central
+	found org.objenesis#objenesis;2.5.1 in central
+	found org.scala-lang#scala-reflect;2.12.8 in central
+	found commons-logging#commons-logging;1.2 in central
+:: resolution report :: resolve 974ms :: artifacts dl 69ms
+	:: modules in use:
+	com.esotericsoftware#kryo;4.0.2 from central in [default]
+	com.esotericsoftware#minlog;1.3.0 from central in [default]
+	com.esotericsoftware#reflectasm;1.11.3 from central in [default]
+	com.typesafe#config;1.3.3 from central in [default]
+	com.typesafe.akka#akka-actor_2.12;2.5.23 from central in [default]
+	commons-logging#commons-logging;1.2 from central in [default]
+	ml.dmlc#xgboost4j-spark_2.12;1.6.1 from central in [default]
+	ml.dmlc#xgboost4j_2.12;1.6.1 from central in [default]
+	org.objenesis#objenesis;2.5.1 from central in [default]
+	org.ow2.asm#asm;5.0.4 from central in [default]
+	org.scala-lang#scala-reflect;2.12.8 from central in [default]
+	org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   12  |   0   |   0   |   0   ||   12  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-cf6ca845-09c4-43b6-9be3-c8da7dfd330d
+	confs: [default]
+	0 artifacts copied, 12 already retrieved (0kB/69ms)
+25/04/22 00:18:05 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+common_length: 10218
+surf_x NaNs: 0
+surf_y NaNs: 0
+surf_vx NaNs: 0
+surf_vy NaNs: 0
+surf_elv NaNs: 0
+surf_SMB NaNs: 0
+velocity_magnitude NaNs: 0
+track_bed_target NaNs: 0
+25/04/22 00:18:16 INFO ShutdownHookManager: Shutdown hook called
+25/04/22 00:18:16 INFO ShutdownHookManager: Deleting directory /tmp/spark-6af151b8-553e-4b7f-9cd5-8c50155565dc
