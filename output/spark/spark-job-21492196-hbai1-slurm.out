@@ -1,0 +1,4 @@
+🐍 Python: /home/hbai1/.conda/envs/sparkxgb/bin/python
+✅ XGBoost is available!
+srun: Job step's --cpus-per-task value exceeds that of job (16 > 8). Job step may never run.
+srun: error: Unable to create step for job 21492196: More processors requested than permitted

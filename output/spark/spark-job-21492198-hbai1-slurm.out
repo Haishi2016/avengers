@@ -1,0 +1,893 @@
+🐍 Python: /home/hbai1/.conda/envs/sparkxgb/bin/python
+✅ XGBoost is available!
+Picked up _JAVA_OPTIONS: -Xmx2048m
+Picked up _JAVA_OPTIONS: -Xmx2048m
+:: loading settings :: url = jar:file:/umbc/rs/is789sp25/common/software/spark-3.5.0-bin-hadoop3/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /home/hbai1/.ivy2/cache
+The jars for the packages stored in: /home/hbai1/.ivy2/jars
+org.apache.spark#spark-sql_2.12 added as a dependency
+ml.dmlc#xgboost4j-spark_2.12 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-fb5e69e7-4f91-48c1-a701-2f4a72a62480;1.0
+	confs: [default]
+	found ml.dmlc#xgboost4j-spark_2.12;1.6.1 in central
+	found ml.dmlc#xgboost4j_2.12;1.6.1 in central
+	found com.typesafe.akka#akka-actor_2.12;2.5.23 in central
+	found com.typesafe#config;1.3.3 in central
+	found org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 in central
+	found com.esotericsoftware#kryo;4.0.2 in central
+	found com.esotericsoftware#reflectasm;1.11.3 in central
+	found org.ow2.asm#asm;5.0.4 in central
+	found com.esotericsoftware#minlog;1.3.0 in central
+	found org.objenesis#objenesis;2.5.1 in central
+	found org.scala-lang#scala-reflect;2.12.8 in central
+	found commons-logging#commons-logging;1.2 in central
+:: resolution report :: resolve 293ms :: artifacts dl 14ms
+	:: modules in use:
+	com.esotericsoftware#kryo;4.0.2 from central in [default]
+	com.esotericsoftware#minlog;1.3.0 from central in [default]
+	com.esotericsoftware#reflectasm;1.11.3 from central in [default]
+	com.typesafe#config;1.3.3 from central in [default]
+	com.typesafe.akka#akka-actor_2.12;2.5.23 from central in [default]
+	commons-logging#commons-logging;1.2 from central in [default]
+	ml.dmlc#xgboost4j-spark_2.12;1.6.1 from central in [default]
+	ml.dmlc#xgboost4j_2.12;1.6.1 from central in [default]
+	org.objenesis#objenesis;2.5.1 from central in [default]
+	org.ow2.asm#asm;5.0.4 from central in [default]
+	org.scala-lang#scala-reflect;2.12.8 from central in [default]
+	org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   12  |   0   |   0   |   0   ||   12  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-fb5e69e7-4f91-48c1-a701-2f4a72a62480
+	confs: [default]
+	0 artifacts copied, 12 already retrieved (0kB/9ms)
+25/05/06 18:49:45 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+25/05/06 18:49:57 INFO SparkContext: Running Spark version 3.5.0
+25/05/06 18:49:57 INFO SparkContext: OS info Linux, 3.10.0-1160.11.1.el7.x86_64, amd64
+25/05/06 18:49:57 INFO SparkContext: Java version 1.8.0_382
+25/05/06 18:49:57 INFO ResourceUtils: ==============================================================
+25/05/06 18:49:57 INFO ResourceUtils: No custom resources configured for spark.driver.
+25/05/06 18:49:57 INFO ResourceUtils: ==============================================================
+25/05/06 18:49:57 INFO SparkContext: Submitted application: SparkXGBRegressorExample
+25/05/06 18:49:57 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 8, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+25/05/06 18:49:57 INFO ResourceProfile: Limiting resource is cpus at 8 tasks per executor
+25/05/06 18:49:57 INFO ResourceProfileManager: Added ResourceProfile id: 0
+25/05/06 18:49:57 INFO SecurityManager: Changing view acls to: hbai1
+25/05/06 18:49:57 INFO SecurityManager: Changing modify acls to: hbai1
+25/05/06 18:49:57 INFO SecurityManager: Changing view acls groups to: 
+25/05/06 18:49:57 INFO SecurityManager: Changing modify acls groups to: 
+25/05/06 18:49:57 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: hbai1; groups with view permissions: EMPTY; users with modify permissions: hbai1; groups with modify permissions: EMPTY
+25/05/06 18:49:58 INFO Utils: Successfully started service 'sparkDriver' on port 35825.
+25/05/06 18:49:58 INFO SparkEnv: Registering MapOutputTracker
+25/05/06 18:49:58 INFO SparkEnv: Registering BlockManagerMaster
+25/05/06 18:49:58 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+25/05/06 18:49:58 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+25/05/06 18:49:58 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+25/05/06 18:49:58 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-6c251ee7-66a3-40c0-9065-fd67cd9e8f6b
+25/05/06 18:49:58 INFO MemoryStore: MemoryStore started with capacity 912.3 MiB
+25/05/06 18:49:58 INFO SparkEnv: Registering OutputCommitCoordinator
+25/05/06 18:49:58 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+25/05/06 18:49:58 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+25/05/06 18:49:58 INFO SparkContext: Added JAR file:///home/hbai1/.ivy2/jars/ml.dmlc_xgboost4j-spark_2.12-1.6.1.jar at spark://cnode002.cm.cluster:35825/jars/ml.dmlc_xgboost4j-spark_2.12-1.6.1.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO SparkContext: Added JAR file:///home/hbai1/.ivy2/jars/ml.dmlc_xgboost4j_2.12-1.6.1.jar at spark://cnode002.cm.cluster:35825/jars/ml.dmlc_xgboost4j_2.12-1.6.1.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO SparkContext: Added JAR file:///home/hbai1/.ivy2/jars/com.esotericsoftware_kryo-4.0.2.jar at spark://cnode002.cm.cluster:35825/jars/com.esotericsoftware_kryo-4.0.2.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO SparkContext: Added JAR file:///home/hbai1/.ivy2/jars/org.scala-lang_scala-reflect-2.12.8.jar at spark://cnode002.cm.cluster:35825/jars/org.scala-lang_scala-reflect-2.12.8.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO SparkContext: Added JAR file:///home/hbai1/.ivy2/jars/commons-logging_commons-logging-1.2.jar at spark://cnode002.cm.cluster:35825/jars/commons-logging_commons-logging-1.2.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO SparkContext: Added JAR file:///home/hbai1/.ivy2/jars/com.typesafe.akka_akka-actor_2.12-2.5.23.jar at spark://cnode002.cm.cluster:35825/jars/com.typesafe.akka_akka-actor_2.12-2.5.23.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO SparkContext: Added JAR file:///home/hbai1/.ivy2/jars/com.typesafe_config-1.3.3.jar at spark://cnode002.cm.cluster:35825/jars/com.typesafe_config-1.3.3.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO SparkContext: Added JAR file:///home/hbai1/.ivy2/jars/org.scala-lang.modules_scala-java8-compat_2.12-0.8.0.jar at spark://cnode002.cm.cluster:35825/jars/org.scala-lang.modules_scala-java8-compat_2.12-0.8.0.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO SparkContext: Added JAR file:///home/hbai1/.ivy2/jars/com.esotericsoftware_reflectasm-1.11.3.jar at spark://cnode002.cm.cluster:35825/jars/com.esotericsoftware_reflectasm-1.11.3.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO SparkContext: Added JAR file:///home/hbai1/.ivy2/jars/com.esotericsoftware_minlog-1.3.0.jar at spark://cnode002.cm.cluster:35825/jars/com.esotericsoftware_minlog-1.3.0.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO SparkContext: Added JAR file:///home/hbai1/.ivy2/jars/org.objenesis_objenesis-2.5.1.jar at spark://cnode002.cm.cluster:35825/jars/org.objenesis_objenesis-2.5.1.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO SparkContext: Added JAR file:///home/hbai1/.ivy2/jars/org.ow2.asm_asm-5.0.4.jar at spark://cnode002.cm.cluster:35825/jars/org.ow2.asm_asm-5.0.4.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO SparkContext: Added file file:///home/hbai1/.ivy2/jars/ml.dmlc_xgboost4j-spark_2.12-1.6.1.jar at file:///home/hbai1/.ivy2/jars/ml.dmlc_xgboost4j-spark_2.12-1.6.1.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Copying /home/hbai1/.ivy2/jars/ml.dmlc_xgboost4j-spark_2.12-1.6.1.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/ml.dmlc_xgboost4j-spark_2.12-1.6.1.jar
+25/05/06 18:49:58 INFO SparkContext: Added file file:///home/hbai1/.ivy2/jars/ml.dmlc_xgboost4j_2.12-1.6.1.jar at file:///home/hbai1/.ivy2/jars/ml.dmlc_xgboost4j_2.12-1.6.1.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Copying /home/hbai1/.ivy2/jars/ml.dmlc_xgboost4j_2.12-1.6.1.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/ml.dmlc_xgboost4j_2.12-1.6.1.jar
+25/05/06 18:49:58 INFO SparkContext: Added file file:///home/hbai1/.ivy2/jars/com.esotericsoftware_kryo-4.0.2.jar at file:///home/hbai1/.ivy2/jars/com.esotericsoftware_kryo-4.0.2.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Copying /home/hbai1/.ivy2/jars/com.esotericsoftware_kryo-4.0.2.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/com.esotericsoftware_kryo-4.0.2.jar
+25/05/06 18:49:58 INFO SparkContext: Added file file:///home/hbai1/.ivy2/jars/org.scala-lang_scala-reflect-2.12.8.jar at file:///home/hbai1/.ivy2/jars/org.scala-lang_scala-reflect-2.12.8.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Copying /home/hbai1/.ivy2/jars/org.scala-lang_scala-reflect-2.12.8.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/org.scala-lang_scala-reflect-2.12.8.jar
+25/05/06 18:49:58 INFO SparkContext: Added file file:///home/hbai1/.ivy2/jars/commons-logging_commons-logging-1.2.jar at file:///home/hbai1/.ivy2/jars/commons-logging_commons-logging-1.2.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Copying /home/hbai1/.ivy2/jars/commons-logging_commons-logging-1.2.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/commons-logging_commons-logging-1.2.jar
+25/05/06 18:49:58 INFO SparkContext: Added file file:///home/hbai1/.ivy2/jars/com.typesafe.akka_akka-actor_2.12-2.5.23.jar at file:///home/hbai1/.ivy2/jars/com.typesafe.akka_akka-actor_2.12-2.5.23.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Copying /home/hbai1/.ivy2/jars/com.typesafe.akka_akka-actor_2.12-2.5.23.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/com.typesafe.akka_akka-actor_2.12-2.5.23.jar
+25/05/06 18:49:58 INFO SparkContext: Added file file:///home/hbai1/.ivy2/jars/com.typesafe_config-1.3.3.jar at file:///home/hbai1/.ivy2/jars/com.typesafe_config-1.3.3.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Copying /home/hbai1/.ivy2/jars/com.typesafe_config-1.3.3.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/com.typesafe_config-1.3.3.jar
+25/05/06 18:49:58 INFO SparkContext: Added file file:///home/hbai1/.ivy2/jars/org.scala-lang.modules_scala-java8-compat_2.12-0.8.0.jar at file:///home/hbai1/.ivy2/jars/org.scala-lang.modules_scala-java8-compat_2.12-0.8.0.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Copying /home/hbai1/.ivy2/jars/org.scala-lang.modules_scala-java8-compat_2.12-0.8.0.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/org.scala-lang.modules_scala-java8-compat_2.12-0.8.0.jar
+25/05/06 18:49:58 INFO SparkContext: Added file file:///home/hbai1/.ivy2/jars/com.esotericsoftware_reflectasm-1.11.3.jar at file:///home/hbai1/.ivy2/jars/com.esotericsoftware_reflectasm-1.11.3.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Copying /home/hbai1/.ivy2/jars/com.esotericsoftware_reflectasm-1.11.3.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/com.esotericsoftware_reflectasm-1.11.3.jar
+25/05/06 18:49:58 INFO SparkContext: Added file file:///home/hbai1/.ivy2/jars/com.esotericsoftware_minlog-1.3.0.jar at file:///home/hbai1/.ivy2/jars/com.esotericsoftware_minlog-1.3.0.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Copying /home/hbai1/.ivy2/jars/com.esotericsoftware_minlog-1.3.0.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/com.esotericsoftware_minlog-1.3.0.jar
+25/05/06 18:49:58 INFO SparkContext: Added file file:///home/hbai1/.ivy2/jars/org.objenesis_objenesis-2.5.1.jar at file:///home/hbai1/.ivy2/jars/org.objenesis_objenesis-2.5.1.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Copying /home/hbai1/.ivy2/jars/org.objenesis_objenesis-2.5.1.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/org.objenesis_objenesis-2.5.1.jar
+25/05/06 18:49:58 INFO SparkContext: Added file file:///home/hbai1/.ivy2/jars/org.ow2.asm_asm-5.0.4.jar at file:///home/hbai1/.ivy2/jars/org.ow2.asm_asm-5.0.4.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Copying /home/hbai1/.ivy2/jars/org.ow2.asm_asm-5.0.4.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/org.ow2.asm_asm-5.0.4.jar
+25/05/06 18:49:58 INFO Executor: Starting executor ID driver on host cnode002.cm.cluster
+25/05/06 18:49:58 INFO Executor: OS info Linux, 3.10.0-1160.11.1.el7.x86_64, amd64
+25/05/06 18:49:58 INFO Executor: Java version 1.8.0_382
+25/05/06 18:49:58 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+25/05/06 18:49:58 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@40197734 for default.
+25/05/06 18:49:58 INFO Executor: Fetching file:///home/hbai1/.ivy2/jars/com.typesafe_config-1.3.3.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: /home/hbai1/.ivy2/jars/com.typesafe_config-1.3.3.jar has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/com.typesafe_config-1.3.3.jar
+25/05/06 18:49:58 INFO Executor: Fetching file:///home/hbai1/.ivy2/jars/com.esotericsoftware_kryo-4.0.2.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: /home/hbai1/.ivy2/jars/com.esotericsoftware_kryo-4.0.2.jar has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/com.esotericsoftware_kryo-4.0.2.jar
+25/05/06 18:49:58 INFO Executor: Fetching file:///home/hbai1/.ivy2/jars/org.scala-lang_scala-reflect-2.12.8.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: /home/hbai1/.ivy2/jars/org.scala-lang_scala-reflect-2.12.8.jar has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/org.scala-lang_scala-reflect-2.12.8.jar
+25/05/06 18:49:58 INFO Executor: Fetching file:///home/hbai1/.ivy2/jars/org.scala-lang.modules_scala-java8-compat_2.12-0.8.0.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: /home/hbai1/.ivy2/jars/org.scala-lang.modules_scala-java8-compat_2.12-0.8.0.jar has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/org.scala-lang.modules_scala-java8-compat_2.12-0.8.0.jar
+25/05/06 18:49:58 INFO Executor: Fetching file:///home/hbai1/.ivy2/jars/com.typesafe.akka_akka-actor_2.12-2.5.23.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: /home/hbai1/.ivy2/jars/com.typesafe.akka_akka-actor_2.12-2.5.23.jar has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/com.typesafe.akka_akka-actor_2.12-2.5.23.jar
+25/05/06 18:49:58 INFO Executor: Fetching file:///home/hbai1/.ivy2/jars/com.esotericsoftware_minlog-1.3.0.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: /home/hbai1/.ivy2/jars/com.esotericsoftware_minlog-1.3.0.jar has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/com.esotericsoftware_minlog-1.3.0.jar
+25/05/06 18:49:58 INFO Executor: Fetching file:///home/hbai1/.ivy2/jars/com.esotericsoftware_reflectasm-1.11.3.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: /home/hbai1/.ivy2/jars/com.esotericsoftware_reflectasm-1.11.3.jar has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/com.esotericsoftware_reflectasm-1.11.3.jar
+25/05/06 18:49:58 INFO Executor: Fetching file:///home/hbai1/.ivy2/jars/ml.dmlc_xgboost4j_2.12-1.6.1.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: /home/hbai1/.ivy2/jars/ml.dmlc_xgboost4j_2.12-1.6.1.jar has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/ml.dmlc_xgboost4j_2.12-1.6.1.jar
+25/05/06 18:49:58 INFO Executor: Fetching file:///home/hbai1/.ivy2/jars/commons-logging_commons-logging-1.2.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: /home/hbai1/.ivy2/jars/commons-logging_commons-logging-1.2.jar has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/commons-logging_commons-logging-1.2.jar
+25/05/06 18:49:58 INFO Executor: Fetching file:///home/hbai1/.ivy2/jars/org.objenesis_objenesis-2.5.1.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: /home/hbai1/.ivy2/jars/org.objenesis_objenesis-2.5.1.jar has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/org.objenesis_objenesis-2.5.1.jar
+25/05/06 18:49:58 INFO Executor: Fetching file:///home/hbai1/.ivy2/jars/ml.dmlc_xgboost4j-spark_2.12-1.6.1.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: /home/hbai1/.ivy2/jars/ml.dmlc_xgboost4j-spark_2.12-1.6.1.jar has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/ml.dmlc_xgboost4j-spark_2.12-1.6.1.jar
+25/05/06 18:49:58 INFO Executor: Fetching file:///home/hbai1/.ivy2/jars/org.ow2.asm_asm-5.0.4.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: /home/hbai1/.ivy2/jars/org.ow2.asm_asm-5.0.4.jar has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/org.ow2.asm_asm-5.0.4.jar
+25/05/06 18:49:58 INFO Executor: Fetching spark://cnode002.cm.cluster:35825/jars/org.ow2.asm_asm-5.0.4.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO TransportClientFactory: Successfully created connection to cnode002.cm.cluster/10.2.1.2:35825 after 25 ms (0 ms spent in bootstraps)
+25/05/06 18:49:58 INFO Utils: Fetching spark://cnode002.cm.cluster:35825/jars/org.ow2.asm_asm-5.0.4.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp2803744890043106498.tmp
+25/05/06 18:49:58 INFO Utils: /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp2803744890043106498.tmp has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/org.ow2.asm_asm-5.0.4.jar
+25/05/06 18:49:58 INFO Executor: Adding file:/tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/org.ow2.asm_asm-5.0.4.jar to class loader default
+25/05/06 18:49:58 INFO Executor: Fetching spark://cnode002.cm.cluster:35825/jars/commons-logging_commons-logging-1.2.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Fetching spark://cnode002.cm.cluster:35825/jars/commons-logging_commons-logging-1.2.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp2312286535174465904.tmp
+25/05/06 18:49:58 INFO Utils: /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp2312286535174465904.tmp has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/commons-logging_commons-logging-1.2.jar
+25/05/06 18:49:58 INFO Executor: Adding file:/tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/commons-logging_commons-logging-1.2.jar to class loader default
+25/05/06 18:49:58 INFO Executor: Fetching spark://cnode002.cm.cluster:35825/jars/org.scala-lang_scala-reflect-2.12.8.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Fetching spark://cnode002.cm.cluster:35825/jars/org.scala-lang_scala-reflect-2.12.8.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp8869980584030959405.tmp
+25/05/06 18:49:58 INFO Utils: /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp8869980584030959405.tmp has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/org.scala-lang_scala-reflect-2.12.8.jar
+25/05/06 18:49:58 INFO Executor: Adding file:/tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/org.scala-lang_scala-reflect-2.12.8.jar to class loader default
+25/05/06 18:49:58 INFO Executor: Fetching spark://cnode002.cm.cluster:35825/jars/ml.dmlc_xgboost4j-spark_2.12-1.6.1.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Fetching spark://cnode002.cm.cluster:35825/jars/ml.dmlc_xgboost4j-spark_2.12-1.6.1.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp7076297593785254358.tmp
+25/05/06 18:49:58 INFO Utils: /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp7076297593785254358.tmp has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/ml.dmlc_xgboost4j-spark_2.12-1.6.1.jar
+25/05/06 18:49:58 INFO Executor: Adding file:/tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/ml.dmlc_xgboost4j-spark_2.12-1.6.1.jar to class loader default
+25/05/06 18:49:58 INFO Executor: Fetching spark://cnode002.cm.cluster:35825/jars/ml.dmlc_xgboost4j_2.12-1.6.1.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Fetching spark://cnode002.cm.cluster:35825/jars/ml.dmlc_xgboost4j_2.12-1.6.1.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp7903376369604280760.tmp
+25/05/06 18:49:58 INFO Utils: /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp7903376369604280760.tmp has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/ml.dmlc_xgboost4j_2.12-1.6.1.jar
+25/05/06 18:49:58 INFO Executor: Adding file:/tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/ml.dmlc_xgboost4j_2.12-1.6.1.jar to class loader default
+25/05/06 18:49:58 INFO Executor: Fetching spark://cnode002.cm.cluster:35825/jars/com.esotericsoftware_kryo-4.0.2.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Fetching spark://cnode002.cm.cluster:35825/jars/com.esotericsoftware_kryo-4.0.2.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp1620631806292845785.tmp
+25/05/06 18:49:58 INFO Utils: /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp1620631806292845785.tmp has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/com.esotericsoftware_kryo-4.0.2.jar
+25/05/06 18:49:58 INFO Executor: Adding file:/tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/com.esotericsoftware_kryo-4.0.2.jar to class loader default
+25/05/06 18:49:58 INFO Executor: Fetching spark://cnode002.cm.cluster:35825/jars/org.objenesis_objenesis-2.5.1.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Fetching spark://cnode002.cm.cluster:35825/jars/org.objenesis_objenesis-2.5.1.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp7444850992792929798.tmp
+25/05/06 18:49:58 INFO Utils: /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp7444850992792929798.tmp has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/org.objenesis_objenesis-2.5.1.jar
+25/05/06 18:49:58 INFO Executor: Adding file:/tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/org.objenesis_objenesis-2.5.1.jar to class loader default
+25/05/06 18:49:58 INFO Executor: Fetching spark://cnode002.cm.cluster:35825/jars/com.esotericsoftware_reflectasm-1.11.3.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Fetching spark://cnode002.cm.cluster:35825/jars/com.esotericsoftware_reflectasm-1.11.3.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp1883140150434623547.tmp
+25/05/06 18:49:58 INFO Utils: /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp1883140150434623547.tmp has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/com.esotericsoftware_reflectasm-1.11.3.jar
+25/05/06 18:49:58 INFO Executor: Adding file:/tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/com.esotericsoftware_reflectasm-1.11.3.jar to class loader default
+25/05/06 18:49:58 INFO Executor: Fetching spark://cnode002.cm.cluster:35825/jars/org.scala-lang.modules_scala-java8-compat_2.12-0.8.0.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Fetching spark://cnode002.cm.cluster:35825/jars/org.scala-lang.modules_scala-java8-compat_2.12-0.8.0.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp8020751745330332403.tmp
+25/05/06 18:49:58 INFO Utils: /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp8020751745330332403.tmp has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/org.scala-lang.modules_scala-java8-compat_2.12-0.8.0.jar
+25/05/06 18:49:58 INFO Executor: Adding file:/tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/org.scala-lang.modules_scala-java8-compat_2.12-0.8.0.jar to class loader default
+25/05/06 18:49:58 INFO Executor: Fetching spark://cnode002.cm.cluster:35825/jars/com.typesafe.akka_akka-actor_2.12-2.5.23.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Fetching spark://cnode002.cm.cluster:35825/jars/com.typesafe.akka_akka-actor_2.12-2.5.23.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp4203868856966280149.tmp
+25/05/06 18:49:58 INFO Utils: /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp4203868856966280149.tmp has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/com.typesafe.akka_akka-actor_2.12-2.5.23.jar
+25/05/06 18:49:58 INFO Executor: Adding file:/tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/com.typesafe.akka_akka-actor_2.12-2.5.23.jar to class loader default
+25/05/06 18:49:58 INFO Executor: Fetching spark://cnode002.cm.cluster:35825/jars/com.esotericsoftware_minlog-1.3.0.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Fetching spark://cnode002.cm.cluster:35825/jars/com.esotericsoftware_minlog-1.3.0.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp5576902232950725418.tmp
+25/05/06 18:49:58 INFO Utils: /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp5576902232950725418.tmp has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/com.esotericsoftware_minlog-1.3.0.jar
+25/05/06 18:49:58 INFO Executor: Adding file:/tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/com.esotericsoftware_minlog-1.3.0.jar to class loader default
+25/05/06 18:49:58 INFO Executor: Fetching spark://cnode002.cm.cluster:35825/jars/com.typesafe_config-1.3.3.jar with timestamp 1746571797832
+25/05/06 18:49:58 INFO Utils: Fetching spark://cnode002.cm.cluster:35825/jars/com.typesafe_config-1.3.3.jar to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp766421574001159003.tmp
+25/05/06 18:49:58 INFO Utils: /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/fetchFileTemp766421574001159003.tmp has been previously copied to /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/com.typesafe_config-1.3.3.jar
+25/05/06 18:49:58 INFO Executor: Adding file:/tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/userFiles-25780562-1da1-41df-aa57-76b63eb7b116/com.typesafe_config-1.3.3.jar to class loader default
+25/05/06 18:49:58 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 40805.
+25/05/06 18:49:58 INFO NettyBlockTransferService: Server created on cnode002.cm.cluster:40805
+25/05/06 18:49:58 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+25/05/06 18:49:58 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, cnode002.cm.cluster, 40805, None)
+25/05/06 18:49:58 INFO BlockManagerMasterEndpoint: Registering block manager cnode002.cm.cluster:40805 with 912.3 MiB RAM, BlockManagerId(driver, cnode002.cm.cluster, 40805, None)
+25/05/06 18:49:58 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, cnode002.cm.cluster, 40805, None)
+25/05/06 18:49:58 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, cnode002.cm.cluster, 40805, None)
+25/05/06 18:49:59 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+25/05/06 18:49:59 INFO SharedState: Warehouse path is 'file:/umbc/rs/is789sp25/users/hbai1/data/spark-warehouse'.
+25/05/06 18:50:03 INFO CodeGenerator: Code generated in 232.000369 ms
+25/05/06 18:50:03 INFO DAGScheduler: Registering RDD 7 (javaToPython at NativeMethodAccessorImpl.java:0) as input to shuffle 0
+25/05/06 18:50:03 INFO DAGScheduler: Got map stage job 0 (javaToPython at NativeMethodAccessorImpl.java:0) with 8 output partitions
+25/05/06 18:50:03 INFO DAGScheduler: Final stage: ShuffleMapStage 0 (javaToPython at NativeMethodAccessorImpl.java:0)
+25/05/06 18:50:03 INFO DAGScheduler: Parents of final stage: List()
+25/05/06 18:50:03 INFO DAGScheduler: Missing parents: List()
+25/05/06 18:50:03 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[7] at javaToPython at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/05/06 18:50:03 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 53.1 KiB, free 912.2 MiB)
+25/05/06 18:50:03 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 22.5 KiB, free 912.2 MiB)
+25/05/06 18:50:03 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on cnode002.cm.cluster:40805 (size: 22.5 KiB, free: 912.3 MiB)
+25/05/06 18:50:03 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1580
+25/05/06 18:50:03 INFO DAGScheduler: Submitting 8 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[7] at javaToPython at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+25/05/06 18:50:03 INFO TaskSchedulerImpl: Adding task set 0.0 with 8 tasks resource profile 0
+25/05/06 18:50:03 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (cnode002.cm.cluster, executor driver, partition 0, PROCESS_LOCAL, 86672 bytes) 
+25/05/06 18:50:03 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (cnode002.cm.cluster, executor driver, partition 1, PROCESS_LOCAL, 86672 bytes) 
+25/05/06 18:50:03 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2) (cnode002.cm.cluster, executor driver, partition 2, PROCESS_LOCAL, 86672 bytes) 
+25/05/06 18:50:03 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3) (cnode002.cm.cluster, executor driver, partition 3, PROCESS_LOCAL, 163509 bytes) 
+25/05/06 18:50:03 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4) (cnode002.cm.cluster, executor driver, partition 4, PROCESS_LOCAL, 86672 bytes) 
+25/05/06 18:50:03 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5) (cnode002.cm.cluster, executor driver, partition 5, PROCESS_LOCAL, 86672 bytes) 
+25/05/06 18:50:03 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6) (cnode002.cm.cluster, executor driver, partition 6, PROCESS_LOCAL, 86672 bytes) 
+25/05/06 18:50:03 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7) (cnode002.cm.cluster, executor driver, partition 7, PROCESS_LOCAL, 161859 bytes) 
+25/05/06 18:50:03 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+25/05/06 18:50:03 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+25/05/06 18:50:03 INFO Executor: Running task 5.0 in stage 0.0 (TID 5)
+25/05/06 18:50:03 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+25/05/06 18:50:03 INFO Executor: Running task 4.0 in stage 0.0 (TID 4)
+25/05/06 18:50:03 INFO Executor: Running task 7.0 in stage 0.0 (TID 7)
+25/05/06 18:50:03 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+25/05/06 18:50:03 INFO Executor: Running task 6.0 in stage 0.0 (TID 6)
+25/05/06 18:50:04 INFO CodeGenerator: Code generated in 52.107277 ms
+25/05/06 18:50:04 INFO CodeGenerator: Code generated in 25.246751 ms
+25/05/06 18:50:04 INFO CodeGenerator: Code generated in 7.762273 ms
+25/05/06 18:50:04 INFO CodeGenerator: Code generated in 10.151028 ms
+25/05/06 18:50:04 INFO PythonRunner: Times: total = 608, boot = 596, init = 10, finish = 2
+25/05/06 18:50:04 INFO PythonRunner: Times: total = 621, boot = 606, init = 13, finish = 2
+25/05/06 18:50:04 INFO PythonRunner: Times: total = 600, boot = 585, init = 13, finish = 2
+25/05/06 18:50:04 INFO PythonRunner: Times: total = 620, boot = 602, init = 16, finish = 2
+25/05/06 18:50:04 INFO PythonRunner: Times: total = 635, boot = 612, init = 21, finish = 2
+25/05/06 18:50:04 INFO PythonRunner: Times: total = 602, boot = 589, init = 9, finish = 4
+25/05/06 18:50:04 INFO PythonRunner: Times: total = 633, boot = 609, init = 22, finish = 2
+25/05/06 18:50:04 INFO PythonRunner: Times: total = 602, boot = 591, init = 8, finish = 3
+25/05/06 18:50:04 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 2624 bytes result sent to driver
+25/05/06 18:50:04 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2624 bytes result sent to driver
+25/05/06 18:50:04 INFO Executor: Finished task 4.0 in stage 0.0 (TID 4). 2624 bytes result sent to driver
+25/05/06 18:50:04 INFO Executor: Finished task 6.0 in stage 0.0 (TID 6). 2624 bytes result sent to driver
+25/05/06 18:50:04 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 2624 bytes result sent to driver
+25/05/06 18:50:04 INFO Executor: Finished task 7.0 in stage 0.0 (TID 7). 2624 bytes result sent to driver
+25/05/06 18:50:04 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 2624 bytes result sent to driver
+25/05/06 18:50:04 INFO Executor: Finished task 5.0 in stage 0.0 (TID 5). 2624 bytes result sent to driver
+25/05/06 18:50:04 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 1270 ms on cnode002.cm.cluster (executor driver) (1/8)
+25/05/06 18:50:04 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 1269 ms on cnode002.cm.cluster (executor driver) (2/8)
+25/05/06 18:50:04 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1289 ms on cnode002.cm.cluster (executor driver) (3/8)
+25/05/06 18:50:04 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 1270 ms on cnode002.cm.cluster (executor driver) (4/8)
+25/05/06 18:50:04 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 1271 ms on cnode002.cm.cluster (executor driver) (5/8)
+25/05/06 18:50:04 INFO PythonAccumulatorV2: Connected to AccumulatorServer at host: 127.0.0.1 port: 56560
+25/05/06 18:50:04 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 1274 ms on cnode002.cm.cluster (executor driver) (6/8)
+25/05/06 18:50:04 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 1274 ms on cnode002.cm.cluster (executor driver) (7/8)
+25/05/06 18:50:04 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 1273 ms on cnode002.cm.cluster (executor driver) (8/8)
+25/05/06 18:50:04 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+25/05/06 18:50:04 INFO DAGScheduler: ShuffleMapStage 0 (javaToPython at NativeMethodAccessorImpl.java:0) finished in 1.401 s
+25/05/06 18:50:04 INFO DAGScheduler: looking for newly runnable stages
+25/05/06 18:50:04 INFO DAGScheduler: running: Set()
+25/05/06 18:50:04 INFO DAGScheduler: waiting: Set()
+25/05/06 18:50:04 INFO DAGScheduler: failed: Set()
+25/05/06 18:50:05 INFO CodeGenerator: Code generated in 8.106708 ms
+25/05/06 18:50:05 INFO DAGScheduler: Registering RDD 15 (javaToPython at NativeMethodAccessorImpl.java:0) as input to shuffle 1
+25/05/06 18:50:05 INFO DAGScheduler: Got map stage job 1 (javaToPython at NativeMethodAccessorImpl.java:0) with 8 output partitions
+25/05/06 18:50:05 INFO DAGScheduler: Final stage: ShuffleMapStage 1 (javaToPython at NativeMethodAccessorImpl.java:0)
+25/05/06 18:50:05 INFO DAGScheduler: Parents of final stage: List()
+25/05/06 18:50:05 INFO DAGScheduler: Missing parents: List()
+25/05/06 18:50:05 INFO DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[15] at javaToPython at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/05/06 18:50:05 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 53.1 KiB, free 912.2 MiB)
+25/05/06 18:50:05 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 22.5 KiB, free 912.2 MiB)
+25/05/06 18:50:05 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on cnode002.cm.cluster:40805 (size: 22.5 KiB, free: 912.3 MiB)
+25/05/06 18:50:05 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1580
+25/05/06 18:50:05 INFO DAGScheduler: Submitting 8 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[15] at javaToPython at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+25/05/06 18:50:05 INFO TaskSchedulerImpl: Adding task set 1.0 with 8 tasks resource profile 0
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 8) (cnode002.cm.cluster, executor driver, partition 0, PROCESS_LOCAL, 86672 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 9) (cnode002.cm.cluster, executor driver, partition 1, PROCESS_LOCAL, 86672 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 10) (cnode002.cm.cluster, executor driver, partition 2, PROCESS_LOCAL, 86672 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 11) (cnode002.cm.cluster, executor driver, partition 3, PROCESS_LOCAL, 163509 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 4.0 in stage 1.0 (TID 12) (cnode002.cm.cluster, executor driver, partition 4, PROCESS_LOCAL, 86672 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 5.0 in stage 1.0 (TID 13) (cnode002.cm.cluster, executor driver, partition 5, PROCESS_LOCAL, 86672 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 6.0 in stage 1.0 (TID 14) (cnode002.cm.cluster, executor driver, partition 6, PROCESS_LOCAL, 86672 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 7.0 in stage 1.0 (TID 15) (cnode002.cm.cluster, executor driver, partition 7, PROCESS_LOCAL, 161859 bytes) 
+25/05/06 18:50:05 INFO Executor: Running task 0.0 in stage 1.0 (TID 8)
+25/05/06 18:50:05 INFO Executor: Running task 1.0 in stage 1.0 (TID 9)
+25/05/06 18:50:05 INFO Executor: Running task 2.0 in stage 1.0 (TID 10)
+25/05/06 18:50:05 INFO Executor: Running task 5.0 in stage 1.0 (TID 13)
+25/05/06 18:50:05 INFO Executor: Running task 4.0 in stage 1.0 (TID 12)
+25/05/06 18:50:05 INFO Executor: Running task 7.0 in stage 1.0 (TID 15)
+25/05/06 18:50:05 INFO Executor: Running task 3.0 in stage 1.0 (TID 11)
+25/05/06 18:50:05 INFO Executor: Running task 6.0 in stage 1.0 (TID 14)
+25/05/06 18:50:05 INFO PythonRunner: Times: total = 8, boot = -550, init = 557, finish = 1
+25/05/06 18:50:05 INFO PythonRunner: Times: total = 10, boot = -553, init = 562, finish = 1
+25/05/06 18:50:05 INFO PythonRunner: Times: total = 27, boot = -575, init = 601, finish = 1
+25/05/06 18:50:05 INFO Executor: Finished task 5.0 in stage 1.0 (TID 13). 2538 bytes result sent to driver
+25/05/06 18:50:05 INFO Executor: Finished task 4.0 in stage 1.0 (TID 12). 2538 bytes result sent to driver
+25/05/06 18:50:05 INFO PythonRunner: Times: total = 4, boot = -555, init = 558, finish = 1
+25/05/06 18:50:05 INFO PythonRunner: Times: total = 18, boot = -573, init = 589, finish = 2
+25/05/06 18:50:05 INFO PythonRunner: Times: total = 22, boot = -574, init = 594, finish = 2
+25/05/06 18:50:05 INFO Executor: Finished task 6.0 in stage 1.0 (TID 14). 2538 bytes result sent to driver
+25/05/06 18:50:05 INFO Executor: Finished task 2.0 in stage 1.0 (TID 10). 2538 bytes result sent to driver
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 5.0 in stage 1.0 (TID 13) in 95 ms on cnode002.cm.cluster (executor driver) (1/8)
+25/05/06 18:50:05 INFO Executor: Finished task 7.0 in stage 1.0 (TID 15). 2538 bytes result sent to driver
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 4.0 in stage 1.0 (TID 12) in 99 ms on cnode002.cm.cluster (executor driver) (2/8)
+25/05/06 18:50:05 INFO Executor: Finished task 3.0 in stage 1.0 (TID 11). 2538 bytes result sent to driver
+25/05/06 18:50:05 INFO PythonRunner: Times: total = 41, boot = -544, init = 584, finish = 1
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 6.0 in stage 1.0 (TID 14) in 106 ms on cnode002.cm.cluster (executor driver) (3/8)
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 10) in 109 ms on cnode002.cm.cluster (executor driver) (4/8)
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 7.0 in stage 1.0 (TID 15) in 107 ms on cnode002.cm.cluster (executor driver) (5/8)
+25/05/06 18:50:05 INFO PythonRunner: Times: total = 60, boot = -541, init = 600, finish = 1
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 11) in 126 ms on cnode002.cm.cluster (executor driver) (6/8)
+25/05/06 18:50:05 INFO Executor: Finished task 0.0 in stage 1.0 (TID 8). 2581 bytes result sent to driver
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 8) in 136 ms on cnode002.cm.cluster (executor driver) (7/8)
+25/05/06 18:50:05 INFO Executor: Finished task 1.0 in stage 1.0 (TID 9). 2581 bytes result sent to driver
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 9) in 140 ms on cnode002.cm.cluster (executor driver) (8/8)
+25/05/06 18:50:05 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+25/05/06 18:50:05 INFO DAGScheduler: ShuffleMapStage 1 (javaToPython at NativeMethodAccessorImpl.java:0) finished in 0.147 s
+25/05/06 18:50:05 INFO DAGScheduler: looking for newly runnable stages
+25/05/06 18:50:05 INFO DAGScheduler: running: Set()
+25/05/06 18:50:05 INFO DAGScheduler: waiting: Set()
+25/05/06 18:50:05 INFO DAGScheduler: failed: Set()
+25/05/06 18:50:05 INFO BlockManagerInfo: Removed broadcast_0_piece0 on cnode002.cm.cluster:40805 in memory (size: 22.5 KiB, free: 912.3 MiB)
+25/05/06 18:50:05 INFO DAGScheduler: Registering RDD 19 (javaToPython at NativeMethodAccessorImpl.java:0) as input to shuffle 2
+25/05/06 18:50:05 INFO DAGScheduler: Got map stage job 2 (javaToPython at NativeMethodAccessorImpl.java:0) with 32 output partitions
+25/05/06 18:50:05 INFO DAGScheduler: Final stage: ShuffleMapStage 3 (javaToPython at NativeMethodAccessorImpl.java:0)
+25/05/06 18:50:05 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 2)
+25/05/06 18:50:05 INFO DAGScheduler: Missing parents: List()
+25/05/06 18:50:05 INFO DAGScheduler: Submitting ShuffleMapStage 3 (MapPartitionsRDD[19] at javaToPython at NativeMethodAccessorImpl.java:0), which has no missing parents
+25/05/06 18:50:05 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 30.1 KiB, free 912.2 MiB)
+25/05/06 18:50:05 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 13.8 KiB, free 912.2 MiB)
+25/05/06 18:50:05 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on cnode002.cm.cluster:40805 (size: 13.8 KiB, free: 912.3 MiB)
+25/05/06 18:50:05 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1580
+25/05/06 18:50:05 INFO DAGScheduler: Submitting 32 missing tasks from ShuffleMapStage 3 (MapPartitionsRDD[19] at javaToPython at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+25/05/06 18:50:05 INFO TaskSchedulerImpl: Adding task set 3.0 with 32 tasks resource profile 0
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 16) (cnode002.cm.cluster, executor driver, partition 0, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 17) (cnode002.cm.cluster, executor driver, partition 1, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 2.0 in stage 3.0 (TID 18) (cnode002.cm.cluster, executor driver, partition 2, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 3.0 in stage 3.0 (TID 19) (cnode002.cm.cluster, executor driver, partition 3, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 4.0 in stage 3.0 (TID 20) (cnode002.cm.cluster, executor driver, partition 4, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 5.0 in stage 3.0 (TID 21) (cnode002.cm.cluster, executor driver, partition 5, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 6.0 in stage 3.0 (TID 22) (cnode002.cm.cluster, executor driver, partition 6, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 7.0 in stage 3.0 (TID 23) (cnode002.cm.cluster, executor driver, partition 7, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO Executor: Running task 0.0 in stage 3.0 (TID 16)
+25/05/06 18:50:05 INFO Executor: Running task 1.0 in stage 3.0 (TID 17)
+25/05/06 18:50:05 INFO Executor: Running task 2.0 in stage 3.0 (TID 18)
+25/05/06 18:50:05 INFO Executor: Running task 4.0 in stage 3.0 (TID 20)
+25/05/06 18:50:05 INFO Executor: Running task 6.0 in stage 3.0 (TID 22)
+25/05/06 18:50:05 INFO Executor: Running task 5.0 in stage 3.0 (TID 21)
+25/05/06 18:50:05 INFO Executor: Running task 7.0 in stage 3.0 (TID 23)
+25/05/06 18:50:05 INFO Executor: Running task 3.0 in stage 3.0 (TID 19)
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.8 KiB) non-empty blocks including 8 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.8 KiB) non-empty blocks including 8 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.7 KiB) non-empty blocks including 8 (4.7 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.8 KiB) non-empty blocks including 8 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.8 KiB) non-empty blocks including 8 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.8 KiB) non-empty blocks including 8 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.8 KiB) non-empty blocks including 8 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 8 ms
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 8 ms
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 9 ms
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.8 KiB) non-empty blocks including 8 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 9 ms
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 8 ms
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 9 ms
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 10 ms
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 10 ms
+25/05/06 18:50:05 INFO CodeGenerator: Code generated in 8.514618 ms
+25/05/06 18:50:05 INFO CodeGenerator: Code generated in 9.316403 ms
+25/05/06 18:50:05 INFO Executor: Finished task 5.0 in stage 3.0 (TID 21). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO Executor: Finished task 4.0 in stage 3.0 (TID 20). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO Executor: Finished task 0.0 in stage 3.0 (TID 16). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 8.0 in stage 3.0 (TID 24) (cnode002.cm.cluster, executor driver, partition 8, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO Executor: Running task 8.0 in stage 3.0 (TID 24)
+25/05/06 18:50:05 INFO Executor: Finished task 3.0 in stage 3.0 (TID 19). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 9.0 in stage 3.0 (TID 25) (cnode002.cm.cluster, executor driver, partition 9, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO Executor: Running task 9.0 in stage 3.0 (TID 25)
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 10.0 in stage 3.0 (TID 26) (cnode002.cm.cluster, executor driver, partition 10, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 11.0 in stage 3.0 (TID 27) (cnode002.cm.cluster, executor driver, partition 11, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO Executor: Finished task 2.0 in stage 3.0 (TID 18). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO Executor: Finished task 1.0 in stage 3.0 (TID 17). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 5.0 in stage 3.0 (TID 21) in 90 ms on cnode002.cm.cluster (executor driver) (1/32)
+25/05/06 18:50:05 INFO Executor: Running task 10.0 in stage 3.0 (TID 26)
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 4.0 in stage 3.0 (TID 20) in 90 ms on cnode002.cm.cluster (executor driver) (2/32)
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 16) in 92 ms on cnode002.cm.cluster (executor driver) (3/32)
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 3.0 in stage 3.0 (TID 19) in 90 ms on cnode002.cm.cluster (executor driver) (4/32)
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.8 KiB) non-empty blocks including 8 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO Executor: Finished task 7.0 in stage 3.0 (TID 23). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO Executor: Finished task 6.0 in stage 3.0 (TID 22). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.8 KiB) non-empty blocks including 8 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 12.0 in stage 3.0 (TID 28) (cnode002.cm.cluster, executor driver, partition 12, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO Executor: Running task 12.0 in stage 3.0 (TID 28)
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.7 KiB) non-empty blocks including 8 (4.7 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 13.0 in stage 3.0 (TID 29) (cnode002.cm.cluster, executor driver, partition 13, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 14.0 in stage 3.0 (TID 30) (cnode002.cm.cluster, executor driver, partition 14, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 15.0 in stage 3.0 (TID 31) (cnode002.cm.cluster, executor driver, partition 15, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.7 KiB) non-empty blocks including 8 (4.7 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 2.0 in stage 3.0 (TID 18) in 97 ms on cnode002.cm.cluster (executor driver) (5/32)
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 17) in 98 ms on cnode002.cm.cluster (executor driver) (6/32)
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 7.0 in stage 3.0 (TID 23) in 96 ms on cnode002.cm.cluster (executor driver) (7/32)
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 6.0 in stage 3.0 (TID 22) in 97 ms on cnode002.cm.cluster (executor driver) (8/32)
+25/05/06 18:50:05 INFO Executor: Running task 11.0 in stage 3.0 (TID 27)
+25/05/06 18:50:05 INFO Executor: Running task 13.0 in stage 3.0 (TID 29)
+25/05/06 18:50:05 INFO Executor: Finished task 9.0 in stage 3.0 (TID 25). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 16.0 in stage 3.0 (TID 32) (cnode002.cm.cluster, executor driver, partition 16, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO Executor: Finished task 10.0 in stage 3.0 (TID 26). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 9.0 in stage 3.0 (TID 25) in 13 ms on cnode002.cm.cluster (executor driver) (9/32)
+25/05/06 18:50:05 INFO Executor: Running task 16.0 in stage 3.0 (TID 32)
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.8 KiB) non-empty blocks including 8 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.8 KiB) non-empty blocks including 8 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO Executor: Running task 14.0 in stage 3.0 (TID 30)
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.8 KiB) non-empty blocks including 8 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO Executor: Finished task 12.0 in stage 3.0 (TID 28). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 17.0 in stage 3.0 (TID 33) (cnode002.cm.cluster, executor driver, partition 17, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO Executor: Running task 17.0 in stage 3.0 (TID 33)
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 18.0 in stage 3.0 (TID 34) (cnode002.cm.cluster, executor driver, partition 18, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.9 KiB) non-empty blocks including 8 (4.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 10.0 in stage 3.0 (TID 26) in 17 ms on cnode002.cm.cluster (executor driver) (10/32)
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 12.0 in stage 3.0 (TID 28) in 14 ms on cnode002.cm.cluster (executor driver) (11/32)
+25/05/06 18:50:05 INFO Executor: Running task 15.0 in stage 3.0 (TID 31)
+25/05/06 18:50:05 INFO Executor: Running task 18.0 in stage 3.0 (TID 34)
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.8 KiB) non-empty blocks including 8 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.7 KiB) non-empty blocks including 8 (4.7 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.8 KiB) non-empty blocks including 8 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO Executor: Finished task 11.0 in stage 3.0 (TID 27). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 19.0 in stage 3.0 (TID 35) (cnode002.cm.cluster, executor driver, partition 19, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO Executor: Running task 19.0 in stage 3.0 (TID 35)
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 11.0 in stage 3.0 (TID 27) in 29 ms on cnode002.cm.cluster (executor driver) (12/32)
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.8 KiB) non-empty blocks including 8 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO Executor: Finished task 13.0 in stage 3.0 (TID 29). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO Executor: Finished task 8.0 in stage 3.0 (TID 24). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 20.0 in stage 3.0 (TID 36) (cnode002.cm.cluster, executor driver, partition 20, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO Executor: Running task 20.0 in stage 3.0 (TID 36)
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 21.0 in stage 3.0 (TID 37) (cnode002.cm.cluster, executor driver, partition 21, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO Executor: Finished task 16.0 in stage 3.0 (TID 32). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 8.0 in stage 3.0 (TID 24) in 39 ms on cnode002.cm.cluster (executor driver) (13/32)
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 13.0 in stage 3.0 (TID 29) in 32 ms on cnode002.cm.cluster (executor driver) (14/32)
+25/05/06 18:50:05 INFO Executor: Running task 21.0 in stage 3.0 (TID 37)
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 22.0 in stage 3.0 (TID 38) (cnode002.cm.cluster, executor driver, partition 22, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 16.0 in stage 3.0 (TID 32) in 27 ms on cnode002.cm.cluster (executor driver) (15/32)
+25/05/06 18:50:05 INFO Executor: Running task 22.0 in stage 3.0 (TID 38)
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.8 KiB) non-empty blocks including 8 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO Executor: Finished task 14.0 in stage 3.0 (TID 30). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.7 KiB) non-empty blocks including 8 (4.7 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.8 KiB) non-empty blocks including 8 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 23.0 in stage 3.0 (TID 39) (cnode002.cm.cluster, executor driver, partition 23, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO Executor: Running task 23.0 in stage 3.0 (TID 39)
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 14.0 in stage 3.0 (TID 30) in 39 ms on cnode002.cm.cluster (executor driver) (16/32)
+25/05/06 18:50:05 INFO Executor: Finished task 15.0 in stage 3.0 (TID 31). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.8 KiB) non-empty blocks including 8 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 24.0 in stage 3.0 (TID 40) (cnode002.cm.cluster, executor driver, partition 24, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 15.0 in stage 3.0 (TID 31) in 41 ms on cnode002.cm.cluster (executor driver) (17/32)
+25/05/06 18:50:05 INFO Executor: Running task 24.0 in stage 3.0 (TID 40)
+25/05/06 18:50:05 INFO Executor: Finished task 17.0 in stage 3.0 (TID 33). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 25.0 in stage 3.0 (TID 41) (cnode002.cm.cluster, executor driver, partition 25, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 17.0 in stage 3.0 (TID 33) in 33 ms on cnode002.cm.cluster (executor driver) (18/32)
+25/05/06 18:50:05 INFO Executor: Running task 25.0 in stage 3.0 (TID 41)
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.8 KiB) non-empty blocks including 8 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.9 KiB) non-empty blocks including 8 (4.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO Executor: Finished task 19.0 in stage 3.0 (TID 35). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 26.0 in stage 3.0 (TID 42) (cnode002.cm.cluster, executor driver, partition 26, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 19.0 in stage 3.0 (TID 35) in 29 ms on cnode002.cm.cluster (executor driver) (19/32)
+25/05/06 18:50:05 INFO Executor: Finished task 22.0 in stage 3.0 (TID 38). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO Executor: Running task 26.0 in stage 3.0 (TID 42)
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 27.0 in stage 3.0 (TID 43) (cnode002.cm.cluster, executor driver, partition 27, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO Executor: Running task 27.0 in stage 3.0 (TID 43)
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 22.0 in stage 3.0 (TID 38) in 22 ms on cnode002.cm.cluster (executor driver) (20/32)
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.9 KiB) non-empty blocks including 8 (4.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO Executor: Finished task 18.0 in stage 3.0 (TID 34). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.8 KiB) non-empty blocks including 8 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO Executor: Finished task 25.0 in stage 3.0 (TID 41). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO Executor: Finished task 24.0 in stage 3.0 (TID 40). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO Executor: Finished task 20.0 in stage 3.0 (TID 36). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 28.0 in stage 3.0 (TID 44) (cnode002.cm.cluster, executor driver, partition 28, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO Executor: Finished task 23.0 in stage 3.0 (TID 39). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 29.0 in stage 3.0 (TID 45) (cnode002.cm.cluster, executor driver, partition 29, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO Executor: Running task 28.0 in stage 3.0 (TID 44)
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 30.0 in stage 3.0 (TID 46) (cnode002.cm.cluster, executor driver, partition 30, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 31.0 in stage 3.0 (TID 47) (cnode002.cm.cluster, executor driver, partition 31, NODE_LOCAL, 9855 bytes) 
+25/05/06 18:50:05 INFO Executor: Finished task 26.0 in stage 3.0 (TID 42). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 18.0 in stage 3.0 (TID 34) in 51 ms on cnode002.cm.cluster (executor driver) (21/32)
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 25.0 in stage 3.0 (TID 41) in 21 ms on cnode002.cm.cluster (executor driver) (22/32)
+25/05/06 18:50:05 INFO Executor: Running task 30.0 in stage 3.0 (TID 46)
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 24.0 in stage 3.0 (TID 40) in 22 ms on cnode002.cm.cluster (executor driver) (23/32)
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 20.0 in stage 3.0 (TID 36) in 35 ms on cnode002.cm.cluster (executor driver) (24/32)
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 23.0 in stage 3.0 (TID 39) in 27 ms on cnode002.cm.cluster (executor driver) (25/32)
+25/05/06 18:50:05 INFO Executor: Finished task 21.0 in stage 3.0 (TID 37). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.6 KiB) non-empty blocks including 8 (4.6 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO Executor: Finished task 27.0 in stage 3.0 (TID 43). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO Executor: Running task 31.0 in stage 3.0 (TID 47)
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 26.0 in stage 3.0 (TID 42) in 14 ms on cnode002.cm.cluster (executor driver) (26/32)
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 21.0 in stage 3.0 (TID 37) in 36 ms on cnode002.cm.cluster (executor driver) (27/32)
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 27.0 in stage 3.0 (TID 43) in 13 ms on cnode002.cm.cluster (executor driver) (28/32)
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.9 KiB) non-empty blocks including 8 (4.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.7 KiB) non-empty blocks including 8 (4.7 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO Executor: Finished task 28.0 in stage 3.0 (TID 44). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO Executor: Running task 29.0 in stage 3.0 (TID 45)
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 28.0 in stage 3.0 (TID 44) in 12 ms on cnode002.cm.cluster (executor driver) (29/32)
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 8 (4.8 KiB) non-empty blocks including 8 (4.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO Executor: Finished task 30.0 in stage 3.0 (TID 46). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO Executor: Finished task 31.0 in stage 3.0 (TID 47). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 30.0 in stage 3.0 (TID 46) in 14 ms on cnode002.cm.cluster (executor driver) (30/32)
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 31.0 in stage 3.0 (TID 47) in 14 ms on cnode002.cm.cluster (executor driver) (31/32)
+25/05/06 18:50:05 INFO Executor: Finished task 29.0 in stage 3.0 (TID 45). 3987 bytes result sent to driver
+25/05/06 18:50:05 INFO TaskSetManager: Finished task 29.0 in stage 3.0 (TID 45) in 20 ms on cnode002.cm.cluster (executor driver) (32/32)
+25/05/06 18:50:05 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+25/05/06 18:50:05 INFO DAGScheduler: ShuffleMapStage 3 (javaToPython at NativeMethodAccessorImpl.java:0) finished in 0.186 s
+25/05/06 18:50:05 INFO DAGScheduler: looking for newly runnable stages
+25/05/06 18:50:05 INFO DAGScheduler: running: Set()
+25/05/06 18:50:05 INFO DAGScheduler: waiting: Set()
+25/05/06 18:50:05 INFO DAGScheduler: failed: Set()
+25/05/06 18:50:05 INFO SparkContext: Starting job: fit at /umbc/rs/is789sp25/users/hbai1/data/xgboost-spark-native.py:70
+25/05/06 18:50:05 INFO DAGScheduler: Got job 3 (fit at /umbc/rs/is789sp25/users/hbai1/data/xgboost-spark-native.py:70) with 8 output partitions
+25/05/06 18:50:05 INFO DAGScheduler: Final stage: ResultStage 6 (fit at /umbc/rs/is789sp25/users/hbai1/data/xgboost-spark-native.py:70)
+25/05/06 18:50:05 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 5)
+25/05/06 18:50:05 INFO DAGScheduler: Missing parents: List()
+25/05/06 18:50:05 INFO DAGScheduler: Submitting ResultStage 6 (PythonRDD[25] at fit at /umbc/rs/is789sp25/users/hbai1/data/xgboost-spark-native.py:70), which has no missing parents
+25/05/06 18:50:05 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 27.7 KiB, free 912.2 MiB)
+25/05/06 18:50:05 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 11.9 KiB, free 912.1 MiB)
+25/05/06 18:50:05 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on cnode002.cm.cluster:40805 (size: 11.9 KiB, free: 912.3 MiB)
+25/05/06 18:50:05 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1580
+25/05/06 18:50:05 INFO DAGScheduler: Submitting 8 missing tasks from ResultStage 6 (PythonRDD[25] at fit at /umbc/rs/is789sp25/users/hbai1/data/xgboost-spark-native.py:70) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+25/05/06 18:50:05 INFO TaskSchedulerImpl: Adding task set 6.0 with 8 tasks resource profile 0
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 2.0 in stage 6.0 (TID 48) (cnode002.cm.cluster, executor driver, partition 2, NODE_LOCAL, 9866 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 5.0 in stage 6.0 (TID 49) (cnode002.cm.cluster, executor driver, partition 5, NODE_LOCAL, 9866 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 4.0 in stage 6.0 (TID 50) (cnode002.cm.cluster, executor driver, partition 4, NODE_LOCAL, 9866 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 7.0 in stage 6.0 (TID 51) (cnode002.cm.cluster, executor driver, partition 7, NODE_LOCAL, 9866 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 1.0 in stage 6.0 (TID 52) (cnode002.cm.cluster, executor driver, partition 1, NODE_LOCAL, 9866 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 3.0 in stage 6.0 (TID 53) (cnode002.cm.cluster, executor driver, partition 3, NODE_LOCAL, 9866 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 6.0 in stage 6.0 (TID 54) (cnode002.cm.cluster, executor driver, partition 6, NODE_LOCAL, 9866 bytes) 
+25/05/06 18:50:05 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 55) (cnode002.cm.cluster, executor driver, partition 0, NODE_LOCAL, 9866 bytes) 
+25/05/06 18:50:05 INFO TaskSchedulerImpl: Registered BarrierCoordinator endpoint
+25/05/06 18:50:05 INFO TaskSchedulerImpl: Successfully scheduled all the 8 tasks for barrier stage 6.
+25/05/06 18:50:05 INFO Executor: Running task 2.0 in stage 6.0 (TID 48)
+25/05/06 18:50:05 INFO Executor: Running task 5.0 in stage 6.0 (TID 49)
+25/05/06 18:50:05 INFO Executor: Running task 3.0 in stage 6.0 (TID 53)
+25/05/06 18:50:05 INFO Executor: Running task 6.0 in stage 6.0 (TID 54)
+25/05/06 18:50:05 INFO Executor: Running task 1.0 in stage 6.0 (TID 52)
+25/05/06 18:50:05 INFO Executor: Running task 4.0 in stage 6.0 (TID 50)
+25/05/06 18:50:05 INFO Executor: Running task 7.0 in stage 6.0 (TID 51)
+25/05/06 18:50:05 INFO Executor: Running task 0.0 in stage 6.0 (TID 55)
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 32 (18.5 KiB) non-empty blocks including 32 (18.5 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 32 (18.5 KiB) non-empty blocks including 32 (18.5 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 32 (18.5 KiB) non-empty blocks including 32 (18.5 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 32 (18.5 KiB) non-empty blocks including 32 (18.5 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 32 (18.5 KiB) non-empty blocks including 32 (18.5 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 32 (18.5 KiB) non-empty blocks including 32 (18.5 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 32 (18.5 KiB) non-empty blocks including 32 (18.5 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Getting 32 (18.5 KiB) non-empty blocks including 32 (18.5 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+25/05/06 18:50:05 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+25/05/06 18:50:06 INFO BaseAllocator: Debug mode disabled.
+25/05/06 18:50:06 INFO DefaultAllocationManagerOption: allocation manager type not specified, using netty as the default type
+25/05/06 18:50:06 INFO CheckAllocator: Using DefaultAllocationManager at memory-netty-12.0.1.jar!/org/apache/arrow/memory/DefaultAllocationManagerFactory.class
+25/05/06 18:50:06 INFO CodeGenerator: Code generated in 5.102096 ms
+25/05/06 18:50:07 INFO BarrierTaskContext: Task 53 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 0.
+25/05/06 18:50:07 INFO BarrierTaskContext: Task 51 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 0.
+25/05/06 18:50:07 INFO BarrierTaskContext: Task 50 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 0.
+25/05/06 18:50:07 INFO BarrierTaskContext: Task 49 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 0.
+25/05/06 18:50:07 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 0.
+25/05/06 18:50:07 INFO BarrierTaskContext: Task 55 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 0.
+25/05/06 18:50:07 INFO BarrierCoordinator: Barrier sync epoch 0 from Stage 6 (Attempt 0) received update from Task 53, current progress: 1/8.
+25/05/06 18:50:07 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 0.
+25/05/06 18:50:07 INFO BarrierCoordinator: Barrier sync epoch 0 from Stage 6 (Attempt 0) received update from Task 51, current progress: 2/8.
+25/05/06 18:50:07 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 0.
+25/05/06 18:50:07 INFO BarrierCoordinator: Barrier sync epoch 0 from Stage 6 (Attempt 0) received update from Task 50, current progress: 3/8.
+25/05/06 18:50:07 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 0.
+25/05/06 18:50:07 INFO BarrierCoordinator: Barrier sync epoch 0 from Stage 6 (Attempt 0) received update from Task 49, current progress: 4/8.
+25/05/06 18:50:07 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 0.
+25/05/06 18:50:07 INFO BarrierCoordinator: Barrier sync epoch 0 from Stage 6 (Attempt 0) received update from Task 55, current progress: 5/8.
+25/05/06 18:50:07 INFO BarrierTaskContext: Task 52 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 0.
+25/05/06 18:50:07 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 0.
+25/05/06 18:50:07 INFO BarrierCoordinator: Barrier sync epoch 0 from Stage 6 (Attempt 0) received update from Task 52, current progress: 6/8.
+25/05/06 18:50:07 INFO BarrierTaskContext: Task 54 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 0.
+25/05/06 18:50:07 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 0.
+25/05/06 18:50:07 INFO BarrierCoordinator: Barrier sync epoch 0 from Stage 6 (Attempt 0) received update from Task 54, current progress: 7/8.
+25/05/06 18:50:07 INFO BarrierTaskContext: Task 48 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 0.
+25/05/06 18:50:07 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 0.
+25/05/06 18:50:07 INFO BarrierCoordinator: Barrier sync epoch 0 from Stage 6 (Attempt 0) received update from Task 48, current progress: 8/8.
+25/05/06 18:50:07 INFO BarrierCoordinator: Barrier sync epoch 0 from Stage 6 (Attempt 0) received all updates from tasks, finished successfully.
+25/05/06 18:50:08 INFO BarrierTaskContext: Task 50 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 1.
+25/05/06 18:50:08 INFO BarrierTaskContext: Task 51 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 1.
+25/05/06 18:50:08 INFO BarrierTaskContext: Task 53 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 1.
+25/05/06 18:50:08 INFO BarrierTaskContext: Task 51 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 1.
+25/05/06 18:50:08 INFO BarrierTaskContext: Task 50 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 1.
+25/05/06 18:50:08 INFO BarrierTaskContext: Task 49 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 1.
+25/05/06 18:50:08 INFO BarrierTaskContext: Task 53 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 1.
+25/05/06 18:50:08 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 1.
+25/05/06 18:50:08 INFO BarrierCoordinator: Barrier sync epoch 1 from Stage 6 (Attempt 0) received update from Task 51, current progress: 1/8.
+25/05/06 18:50:08 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 1.
+25/05/06 18:50:08 INFO BarrierCoordinator: Barrier sync epoch 1 from Stage 6 (Attempt 0) received update from Task 50, current progress: 2/8.
+25/05/06 18:50:08 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 1.
+25/05/06 18:50:08 INFO BarrierCoordinator: Barrier sync epoch 1 from Stage 6 (Attempt 0) received update from Task 53, current progress: 3/8.
+25/05/06 18:50:08 INFO BarrierTaskContext: Task 49 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 1.
+25/05/06 18:50:08 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 1.
+25/05/06 18:50:08 INFO BarrierCoordinator: Barrier sync epoch 1 from Stage 6 (Attempt 0) received update from Task 49, current progress: 4/8.
+25/05/06 18:50:08 INFO BarrierTaskContext: Task 55 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 1.
+25/05/06 18:50:08 INFO BarrierTaskContext: Task 52 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 1.
+25/05/06 18:50:08 INFO BarrierTaskContext: Task 52 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 1.
+25/05/06 18:50:08 INFO BarrierTaskContext: Task 55 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 1.
+25/05/06 18:50:08 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 1.
+25/05/06 18:50:08 INFO BarrierCoordinator: Barrier sync epoch 1 from Stage 6 (Attempt 0) received update from Task 52, current progress: 5/8.
+25/05/06 18:50:08 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 1.
+25/05/06 18:50:08 INFO BarrierCoordinator: Barrier sync epoch 1 from Stage 6 (Attempt 0) received update from Task 55, current progress: 6/8.
+25/05/06 18:50:08 INFO BarrierTaskContext: Task 54 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 1.
+25/05/06 18:50:08 INFO BarrierTaskContext: Task 54 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 1.
+25/05/06 18:50:08 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 1.
+25/05/06 18:50:08 INFO BarrierCoordinator: Barrier sync epoch 1 from Stage 6 (Attempt 0) received update from Task 54, current progress: 7/8.
+25/05/06 18:50:08 INFO BarrierTaskContext: Task 48 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 1.
+25/05/06 18:50:08 INFO BarrierTaskContext: Task 48 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 1.
+25/05/06 18:50:08 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 1.
+25/05/06 18:50:08 INFO BarrierCoordinator: Barrier sync epoch 1 from Stage 6 (Attempt 0) received update from Task 48, current progress: 8/8.
+25/05/06 18:50:08 INFO BarrierCoordinator: Barrier sync epoch 1 from Stage 6 (Attempt 0) received all updates from tasks, finished successfully.
+25/05/06 18:50:09 INFO BarrierTaskContext: Task 51 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 2.
+25/05/06 18:50:09 INFO BarrierTaskContext: Task 53 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 2.
+25/05/06 18:50:09 INFO BarrierTaskContext: Task 50 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 2.
+25/05/06 18:50:09 INFO BarrierTaskContext: Task 49 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 2.
+25/05/06 18:50:09 INFO BarrierTaskContext: Task 52 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 2.
+25/05/06 18:50:09 INFO BarrierTaskContext: Task 55 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 2.
+25/05/06 18:50:09 INFO BarrierTaskContext: Task 54 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 2.
+25/05/06 18:50:09 INFO BarrierTaskContext: Task 48 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 2.
+[18:50:09] task 7 got new rank 0
+[18:50:10] task 3 got new rank 1
+[18:50:10] task 4 got new rank 2
+[18:50:10] task 5 got new rank 3
+[18:50:10] task 0 got new rank 4
+[18:50:10] task 1 got new rank 5
+[18:50:10] task 6 got new rank 6
+[18:50:10] task 2 got new rank 7
+25/05/06 18:50:11 INFO BarrierTaskContext: Task 51 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 2.
+25/05/06 18:50:11 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 2.
+25/05/06 18:50:11 INFO BarrierCoordinator: Barrier sync epoch 2 from Stage 6 (Attempt 0) received update from Task 51, current progress: 1/8.
+25/05/06 18:50:11 INFO BarrierTaskContext: Task 53 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 2.
+25/05/06 18:50:11 INFO BarrierTaskContext: Task 48 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 2.
+25/05/06 18:50:11 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 2.
+25/05/06 18:50:11 INFO BarrierCoordinator: Barrier sync epoch 2 from Stage 6 (Attempt 0) received update from Task 53, current progress: 2/8.
+25/05/06 18:50:11 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 2.
+25/05/06 18:50:11 INFO BarrierCoordinator: Barrier sync epoch 2 from Stage 6 (Attempt 0) received update from Task 48, current progress: 3/8.
+25/05/06 18:50:11 INFO BarrierTaskContext: Task 55 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 2.
+25/05/06 18:50:11 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 2.
+25/05/06 18:50:11 INFO BarrierCoordinator: Barrier sync epoch 2 from Stage 6 (Attempt 0) received update from Task 55, current progress: 4/8.
+25/05/06 18:50:11 INFO BarrierTaskContext: Task 52 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 2.
+25/05/06 18:50:11 INFO BarrierTaskContext: Task 50 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 2.
+25/05/06 18:50:11 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 2.
+25/05/06 18:50:11 INFO BarrierTaskContext: Task 54 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 2.
+25/05/06 18:50:11 INFO BarrierCoordinator: Barrier sync epoch 2 from Stage 6 (Attempt 0) received update from Task 52, current progress: 5/8.
+25/05/06 18:50:11 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 2.
+25/05/06 18:50:11 INFO BarrierCoordinator: Barrier sync epoch 2 from Stage 6 (Attempt 0) received update from Task 50, current progress: 6/8.
+25/05/06 18:50:11 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 2.
+25/05/06 18:50:11 INFO BarrierCoordinator: Barrier sync epoch 2 from Stage 6 (Attempt 0) received update from Task 54, current progress: 7/8.
+25/05/06 18:50:11 INFO BarrierTaskContext: Task 49 from Stage 6(Attempt 0) has entered the global sync, current barrier epoch is 2.
+25/05/06 18:50:11 INFO BarrierCoordinator: Current barrier epoch for Stage 6 (Attempt 0) is 2.
+25/05/06 18:50:11 INFO BarrierCoordinator: Barrier sync epoch 2 from Stage 6 (Attempt 0) received update from Task 49, current progress: 8/8.
+25/05/06 18:50:11 INFO BarrierCoordinator: Barrier sync epoch 2 from Stage 6 (Attempt 0) received all updates from tasks, finished successfully.
+25/05/06 18:50:12 INFO BarrierTaskContext: Task 53 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 3.
+25/05/06 18:50:12 INFO BarrierTaskContext: Task 51 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 3.
+25/05/06 18:50:12 INFO BarrierTaskContext: Task 48 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 3.
+25/05/06 18:50:12 INFO ArrowPythonRunner: Times: total = 6422, boot = 584, init = 1614, finish = 4224
+25/05/06 18:50:12 INFO PythonRunner: Times: total = 5804, boot = -1021, init = 6825, finish = 0
+25/05/06 18:50:12 INFO ArrowPythonRunner: Times: total = 6423, boot = 577, init = 1636, finish = 4210
+25/05/06 18:50:12 INFO ArrowPythonRunner: Times: total = 6423, boot = 587, init = 1616, finish = 4220
+25/05/06 18:50:12 INFO BarrierTaskContext: Task 54 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 3.
+25/05/06 18:50:12 INFO Executor: Finished task 3.0 in stage 6.0 (TID 53). 4165 bytes result sent to driver
+25/05/06 18:50:12 INFO TaskSchedulerImpl: Skip current round of resource offers for barrier stage 6 because the barrier taskSet requires 8 slots, while the total number of available slots is 1.
+25/05/06 18:50:12 INFO TaskSetManager: Finished task 3.0 in stage 6.0 (TID 53) in 6524 ms on cnode002.cm.cluster (executor driver) (1/8)
+25/05/06 18:50:12 INFO BarrierTaskContext: Task 55 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 3.
+25/05/06 18:50:12 INFO BarrierTaskContext: Task 50 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 3.
+25/05/06 18:50:12 INFO ArrowPythonRunner: Times: total = 6424, boot = 579, init = 1632, finish = 4213
+25/05/06 18:50:12 INFO BarrierTaskContext: Task 52 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 3.
+25/05/06 18:50:12 INFO PythonRunner: Times: total = 5808, boot = -1079, init = 6887, finish = 0
+25/05/06 18:50:12 INFO ArrowPythonRunner: Times: total = 6428, boot = 592, init = 1612, finish = 4224
+25/05/06 18:50:12 INFO PythonRunner: Times: total = 5821, boot = -1067, init = 6888, finish = 0
+25/05/06 18:50:12 INFO ArrowPythonRunner: Times: total = 6437, boot = 574, init = 1630, finish = 4233
+25/05/06 18:50:12 INFO BarrierTaskContext: Task 49 from Stage 6(Attempt 0) finished global sync successfully, waited for 1 seconds, current barrier epoch is 3.
+25/05/06 18:50:12 INFO PythonRunner: Times: total = 5829, boot = -1047, init = 6876, finish = 0
+25/05/06 18:50:12 INFO PythonRunner: Times: total = 5851, boot = -1074, init = 6925, finish = 0
+25/05/06 18:50:12 INFO PythonRunner: Times: total = 5828, boot = -1059, init = 6887, finish = 0
+25/05/06 18:50:12 INFO ArrowPythonRunner: Times: total = 6450, boot = 589, init = 1616, finish = 4245
+25/05/06 18:50:12 INFO PythonRunner: Times: total = 5862, boot = -1037, init = 6899, finish = 0
+25/05/06 18:50:12 INFO Executor: Finished task 1.0 in stage 6.0 (TID 52). 4165 bytes result sent to driver
+25/05/06 18:50:12 INFO Executor: Finished task 2.0 in stage 6.0 (TID 48). 4165 bytes result sent to driver
+25/05/06 18:50:12 INFO Executor: Finished task 6.0 in stage 6.0 (TID 54). 4165 bytes result sent to driver
+25/05/06 18:50:12 INFO TaskSchedulerImpl: Skip current round of resource offers for barrier stage 6 because the barrier taskSet requires 8 slots, while the total number of available slots is 2.
+25/05/06 18:50:12 INFO Executor: Finished task 4.0 in stage 6.0 (TID 50). 4165 bytes result sent to driver
+25/05/06 18:50:12 INFO TaskSchedulerImpl: Skip current round of resource offers for barrier stage 6 because the barrier taskSet requires 8 slots, while the total number of available slots is 3.
+25/05/06 18:50:12 INFO TaskSchedulerImpl: Skip current round of resource offers for barrier stage 6 because the barrier taskSet requires 8 slots, while the total number of available slots is 4.
+25/05/06 18:50:12 INFO TaskSchedulerImpl: Skip current round of resource offers for barrier stage 6 because the barrier taskSet requires 8 slots, while the total number of available slots is 5.
+25/05/06 18:50:12 INFO TaskSetManager: Finished task 2.0 in stage 6.0 (TID 48) in 6594 ms on cnode002.cm.cluster (executor driver) (2/8)
+25/05/06 18:50:12 INFO TaskSetManager: Finished task 4.0 in stage 6.0 (TID 50) in 6594 ms on cnode002.cm.cluster (executor driver) (3/8)
+25/05/06 18:50:12 INFO TaskSetManager: Finished task 6.0 in stage 6.0 (TID 54) in 6594 ms on cnode002.cm.cluster (executor driver) (4/8)
+25/05/06 18:50:12 INFO TaskSetManager: Finished task 1.0 in stage 6.0 (TID 52) in 6594 ms on cnode002.cm.cluster (executor driver) (5/8)
+25/05/06 18:50:12 INFO Executor: Finished task 7.0 in stage 6.0 (TID 51). 4165 bytes result sent to driver
+25/05/06 18:50:12 INFO TaskSchedulerImpl: Skip current round of resource offers for barrier stage 6 because the barrier taskSet requires 8 slots, while the total number of available slots is 6.
+25/05/06 18:50:12 INFO TaskSetManager: Finished task 7.0 in stage 6.0 (TID 51) in 6598 ms on cnode002.cm.cluster (executor driver) (6/8)
+25/05/06 18:50:12 INFO Executor: Finished task 5.0 in stage 6.0 (TID 49). 4165 bytes result sent to driver
+25/05/06 18:50:12 INFO TaskSchedulerImpl: Skip current round of resource offers for barrier stage 6 because the barrier taskSet requires 8 slots, while the total number of available slots is 7.
+25/05/06 18:50:12 INFO TaskSetManager: Finished task 5.0 in stage 6.0 (TID 49) in 6599 ms on cnode002.cm.cluster (executor driver) (7/8)
+25/05/06 18:50:12 INFO ArrowPythonRunner: Times: total = 6479, boot = 582, init = 1625, finish = 4272
+25/05/06 18:50:12 INFO PythonRunner: Times: total = 5903, boot = -1064, init = 6960, finish = 7
+25/05/06 18:50:12 INFO MemoryStore: Block taskresult_55 stored as bytes in memory (estimated size 1680.5 KiB, free 910.5 MiB)
+25/05/06 18:50:12 INFO BlockManagerInfo: Added taskresult_55 in memory on cnode002.cm.cluster:40805 (size: 1680.5 KiB, free: 910.6 MiB)
+25/05/06 18:50:12 INFO Executor: Finished task 0.0 in stage 6.0 (TID 55). 1720845 bytes result sent via BlockManager)
+25/05/06 18:50:12 INFO TransportClientFactory: Successfully created connection to cnode002.cm.cluster/10.2.1.2:40805 after 1 ms (0 ms spent in bootstraps)
+25/05/06 18:50:12 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 55) in 6668 ms on cnode002.cm.cluster (executor driver) (8/8)
+25/05/06 18:50:12 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+25/05/06 18:50:12 INFO DAGScheduler: ResultStage 6 (fit at /umbc/rs/is789sp25/users/hbai1/data/xgboost-spark-native.py:70) finished in 6.697 s
+25/05/06 18:50:12 INFO BlockManagerInfo: Removed taskresult_55 on cnode002.cm.cluster:40805 in memory (size: 1680.5 KiB, free: 912.3 MiB)
+25/05/06 18:50:12 INFO BlockManagerInfo: Removed broadcast_2_piece0 on cnode002.cm.cluster:40805 in memory (size: 13.8 KiB, free: 912.3 MiB)
+25/05/06 18:50:12 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+25/05/06 18:50:12 INFO TaskSchedulerImpl: Killing all running tasks in stage 6: Stage finished
+25/05/06 18:50:12 INFO DAGScheduler: Job 3 finished: fit at /umbc/rs/is789sp25/users/hbai1/data/xgboost-spark-native.py:70, took 6.710979 s
+25/05/06 18:50:12 INFO BlockManagerInfo: Removed broadcast_1_piece0 on cnode002.cm.cluster:40805 in memory (size: 22.5 KiB, free: 912.3 MiB)
+/home/hbai1/.conda/envs/sparkxgb/lib/python3.9/site-packages/xgboost/sklearn.py:808: UserWarning: Loading a native XGBoost model with Scikit-Learn interface.
+  warnings.warn("Loading a native XGBoost model with Scikit-Learn interface.")
+25/05/06 18:50:12 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 312.0 B, free 912.3 MiB)
+25/05/06 18:50:12 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 564.0 KiB, free 911.7 MiB)
+25/05/06 18:50:12 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on cnode002.cm.cluster:40805 (size: 564.0 KiB, free: 911.7 MiB)
+25/05/06 18:50:12 INFO SparkContext: Created broadcast 4 from broadcast at NativeMethodAccessorImpl.java:0
+25/05/06 18:50:12 INFO CodeGenerator: Code generated in 6.894005 ms
+25/05/06 18:50:12 INFO CodeGenerator: Code generated in 24.546879 ms
+25/05/06 18:50:12 INFO SparkContext: Starting job: toPandas at /umbc/rs/is789sp25/users/hbai1/data/xgboost-spark-native.py:74
+25/05/06 18:50:12 INFO DAGScheduler: Got job 4 (toPandas at /umbc/rs/is789sp25/users/hbai1/data/xgboost-spark-native.py:74) with 8 output partitions
+25/05/06 18:50:12 INFO DAGScheduler: Final stage: ResultStage 7 (toPandas at /umbc/rs/is789sp25/users/hbai1/data/xgboost-spark-native.py:74)
+25/05/06 18:50:12 INFO DAGScheduler: Parents of final stage: List()
+25/05/06 18:50:12 INFO DAGScheduler: Missing parents: List()
+25/05/06 18:50:12 INFO DAGScheduler: Submitting ResultStage 7 (MapPartitionsRDD[30] at toPandas at /umbc/rs/is789sp25/users/hbai1/data/xgboost-spark-native.py:74), which has no missing parents
+25/05/06 18:50:12 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 59.4 KiB, free 911.7 MiB)
+25/05/06 18:50:12 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 25.2 KiB, free 911.6 MiB)
+25/05/06 18:50:12 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on cnode002.cm.cluster:40805 (size: 25.2 KiB, free: 911.7 MiB)
+25/05/06 18:50:12 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1580
+25/05/06 18:50:12 INFO DAGScheduler: Submitting 8 missing tasks from ResultStage 7 (MapPartitionsRDD[30] at toPandas at /umbc/rs/is789sp25/users/hbai1/data/xgboost-spark-native.py:74) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+25/05/06 18:50:12 INFO TaskSchedulerImpl: Adding task set 7.0 with 8 tasks resource profile 0
+25/05/06 18:50:12 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 56) (cnode002.cm.cluster, executor driver, partition 0, PROCESS_LOCAL, 86683 bytes) 
+25/05/06 18:50:12 INFO TaskSetManager: Starting task 1.0 in stage 7.0 (TID 57) (cnode002.cm.cluster, executor driver, partition 1, PROCESS_LOCAL, 86683 bytes) 
+25/05/06 18:50:12 INFO TaskSetManager: Starting task 2.0 in stage 7.0 (TID 58) (cnode002.cm.cluster, executor driver, partition 2, PROCESS_LOCAL, 86683 bytes) 
+25/05/06 18:50:12 INFO TaskSetManager: Starting task 3.0 in stage 7.0 (TID 59) (cnode002.cm.cluster, executor driver, partition 3, PROCESS_LOCAL, 163520 bytes) 
+25/05/06 18:50:12 INFO TaskSetManager: Starting task 4.0 in stage 7.0 (TID 60) (cnode002.cm.cluster, executor driver, partition 4, PROCESS_LOCAL, 86683 bytes) 
+25/05/06 18:50:12 INFO TaskSetManager: Starting task 5.0 in stage 7.0 (TID 61) (cnode002.cm.cluster, executor driver, partition 5, PROCESS_LOCAL, 86683 bytes) 
+25/05/06 18:50:12 INFO TaskSetManager: Starting task 6.0 in stage 7.0 (TID 62) (cnode002.cm.cluster, executor driver, partition 6, PROCESS_LOCAL, 86683 bytes) 
+25/05/06 18:50:12 INFO TaskSetManager: Starting task 7.0 in stage 7.0 (TID 63) (cnode002.cm.cluster, executor driver, partition 7, PROCESS_LOCAL, 161870 bytes) 
+25/05/06 18:50:12 INFO Executor: Running task 0.0 in stage 7.0 (TID 56)
+25/05/06 18:50:12 INFO Executor: Running task 1.0 in stage 7.0 (TID 57)
+25/05/06 18:50:12 INFO Executor: Running task 2.0 in stage 7.0 (TID 58)
+25/05/06 18:50:12 INFO Executor: Running task 3.0 in stage 7.0 (TID 59)
+25/05/06 18:50:12 INFO Executor: Running task 6.0 in stage 7.0 (TID 62)
+25/05/06 18:50:12 INFO Executor: Running task 7.0 in stage 7.0 (TID 63)
+25/05/06 18:50:12 INFO Executor: Running task 5.0 in stage 7.0 (TID 61)
+25/05/06 18:50:12 INFO Executor: Running task 4.0 in stage 7.0 (TID 60)
+25/05/06 18:50:12 INFO CodeGenerator: Code generated in 26.68797 ms
+25/05/06 18:50:12 INFO CodeGenerator: Code generated in 6.239476 ms
+25/05/06 18:50:12 INFO PythonRunner: Times: total = 20, boot = -407, init = 426, finish = 1
+25/05/06 18:50:12 INFO CodeGenerator: Code generated in 25.310403 ms
+25/05/06 18:50:12 INFO PythonRunner: Times: total = 4, boot = -482, init = 484, finish = 2
+25/05/06 18:50:12 INFO PythonRunner: Times: total = 3, boot = -504, init = 506, finish = 1
+25/05/06 18:50:12 INFO PythonRunner: Times: total = 23, boot = -447, init = 469, finish = 1
+25/05/06 18:50:12 INFO CodeGenerator: Code generated in 18.753469 ms
+25/05/06 18:50:12 INFO PythonRunner: Times: total = 3, boot = -504, init = 506, finish = 1
+25/05/06 18:50:12 INFO PythonRunner: Times: total = 30, boot = -480, init = 509, finish = 1
+25/05/06 18:50:12 INFO PythonRunner: Times: total = 28, boot = -460, init = 487, finish = 1
+25/05/06 18:50:12 INFO PythonRunner: Times: total = 3, boot = -477, init = 478, finish = 2
+25/05/06 18:50:12 INFO ArrowPythonRunner: Times: total = 73, boot = -513, init = 580, finish = 6
+25/05/06 18:50:12 INFO Executor: Finished task 6.0 in stage 7.0 (TID 62). 4157 bytes result sent to driver
+25/05/06 18:50:12 INFO TaskSetManager: Finished task 6.0 in stage 7.0 (TID 62) in 212 ms on cnode002.cm.cluster (executor driver) (1/8)
+25/05/06 18:50:12 INFO ArrowPythonRunner: Times: total = 70, boot = -504, init = 568, finish = 6
+25/05/06 18:50:12 INFO Executor: Finished task 1.0 in stage 7.0 (TID 57). 4173 bytes result sent to driver
+25/05/06 18:50:12 INFO TaskSetManager: Finished task 1.0 in stage 7.0 (TID 57) in 228 ms on cnode002.cm.cluster (executor driver) (2/8)
+25/05/06 18:50:12 INFO ArrowPythonRunner: Times: total = 102, boot = -490, init = 586, finish = 6
+25/05/06 18:50:12 INFO Executor: Finished task 5.0 in stage 7.0 (TID 61). 4101 bytes result sent to driver
+25/05/06 18:50:12 INFO TaskSetManager: Finished task 5.0 in stage 7.0 (TID 61) in 243 ms on cnode002.cm.cluster (executor driver) (3/8)
+25/05/06 18:50:12 INFO ArrowPythonRunner: Times: total = 113, boot = -493, init = 600, finish = 6
+25/05/06 18:50:12 INFO Executor: Finished task 0.0 in stage 7.0 (TID 56). 4028 bytes result sent to driver
+25/05/06 18:50:12 INFO ArrowPythonRunner: Times: total = 83, boot = -500, init = 576, finish = 7
+25/05/06 18:50:12 INFO Executor: Finished task 4.0 in stage 7.0 (TID 60). 4303 bytes result sent to driver
+25/05/06 18:50:12 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 56) in 254 ms on cnode002.cm.cluster (executor driver) (4/8)
+25/05/06 18:50:12 INFO TaskSetManager: Finished task 4.0 in stage 7.0 (TID 60) in 254 ms on cnode002.cm.cluster (executor driver) (5/8)
+25/05/06 18:50:12 INFO ArrowPythonRunner: Times: total = 131, boot = -467, init = 557, finish = 41
+25/05/06 18:50:12 INFO ArrowPythonRunner: Times: total = 146, boot = -519, init = 659, finish = 6
+25/05/06 18:50:12 INFO Executor: Finished task 3.0 in stage 7.0 (TID 59). 5657 bytes result sent to driver
+25/05/06 18:50:12 INFO Executor: Finished task 2.0 in stage 7.0 (TID 58). 4201 bytes result sent to driver
+25/05/06 18:50:12 INFO ArrowPythonRunner: Times: total = 143, boot = -507, init = 637, finish = 13
+25/05/06 18:50:12 INFO Executor: Finished task 7.0 in stage 7.0 (TID 63). 5739 bytes result sent to driver
+25/05/06 18:50:12 INFO TaskSetManager: Finished task 3.0 in stage 7.0 (TID 59) in 265 ms on cnode002.cm.cluster (executor driver) (6/8)
+25/05/06 18:50:12 INFO TaskSetManager: Finished task 2.0 in stage 7.0 (TID 58) in 271 ms on cnode002.cm.cluster (executor driver) (7/8)
+25/05/06 18:50:12 INFO TaskSetManager: Finished task 7.0 in stage 7.0 (TID 63) in 270 ms on cnode002.cm.cluster (executor driver) (8/8)
+25/05/06 18:50:12 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+25/05/06 18:50:12 INFO DAGScheduler: ResultStage 7 (toPandas at /umbc/rs/is789sp25/users/hbai1/data/xgboost-spark-native.py:74) finished in 0.279 s
+25/05/06 18:50:12 INFO DAGScheduler: Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
+25/05/06 18:50:12 INFO TaskSchedulerImpl: Killing all running tasks in stage 7: Stage finished
+25/05/06 18:50:12 INFO DAGScheduler: Job 4 finished: toPandas at /umbc/rs/is789sp25/users/hbai1/data/xgboost-spark-native.py:74, took 0.282823 s
+25/05/06 18:50:12 INFO SparkContext: Starting job: toPandas at /umbc/rs/is789sp25/users/hbai1/data/xgboost-spark-native.py:80
+25/05/06 18:50:12 INFO DAGScheduler: Got job 5 (toPandas at /umbc/rs/is789sp25/users/hbai1/data/xgboost-spark-native.py:80) with 8 output partitions
+25/05/06 18:50:12 INFO DAGScheduler: Final stage: ResultStage 8 (toPandas at /umbc/rs/is789sp25/users/hbai1/data/xgboost-spark-native.py:80)
+25/05/06 18:50:12 INFO DAGScheduler: Parents of final stage: List()
+25/05/06 18:50:12 INFO DAGScheduler: Missing parents: List()
+25/05/06 18:50:12 INFO DAGScheduler: Submitting ResultStage 8 (MapPartitionsRDD[35] at toPandas at /umbc/rs/is789sp25/users/hbai1/data/xgboost-spark-native.py:80), which has no missing parents
+25/05/06 18:50:12 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 59.4 KiB, free 911.6 MiB)
+25/05/06 18:50:12 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 25.2 KiB, free 911.5 MiB)
+25/05/06 18:50:12 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on cnode002.cm.cluster:40805 (size: 25.2 KiB, free: 911.7 MiB)
+25/05/06 18:50:12 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1580
+25/05/06 18:50:12 INFO DAGScheduler: Submitting 8 missing tasks from ResultStage 8 (MapPartitionsRDD[35] at toPandas at /umbc/rs/is789sp25/users/hbai1/data/xgboost-spark-native.py:80) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7))
+25/05/06 18:50:12 INFO TaskSchedulerImpl: Adding task set 8.0 with 8 tasks resource profile 0
+25/05/06 18:50:12 INFO TaskSetManager: Starting task 0.0 in stage 8.0 (TID 64) (cnode002.cm.cluster, executor driver, partition 0, PROCESS_LOCAL, 86683 bytes) 
+25/05/06 18:50:12 INFO TaskSetManager: Starting task 1.0 in stage 8.0 (TID 65) (cnode002.cm.cluster, executor driver, partition 1, PROCESS_LOCAL, 86683 bytes) 
+25/05/06 18:50:12 INFO TaskSetManager: Starting task 2.0 in stage 8.0 (TID 66) (cnode002.cm.cluster, executor driver, partition 2, PROCESS_LOCAL, 86683 bytes) 
+25/05/06 18:50:12 INFO TaskSetManager: Starting task 3.0 in stage 8.0 (TID 67) (cnode002.cm.cluster, executor driver, partition 3, PROCESS_LOCAL, 163520 bytes) 
+25/05/06 18:50:12 INFO TaskSetManager: Starting task 4.0 in stage 8.0 (TID 68) (cnode002.cm.cluster, executor driver, partition 4, PROCESS_LOCAL, 86683 bytes) 
+25/05/06 18:50:12 INFO TaskSetManager: Starting task 5.0 in stage 8.0 (TID 69) (cnode002.cm.cluster, executor driver, partition 5, PROCESS_LOCAL, 86683 bytes) 
+25/05/06 18:50:12 INFO TaskSetManager: Starting task 6.0 in stage 8.0 (TID 70) (cnode002.cm.cluster, executor driver, partition 6, PROCESS_LOCAL, 86683 bytes) 
+25/05/06 18:50:12 INFO TaskSetManager: Starting task 7.0 in stage 8.0 (TID 71) (cnode002.cm.cluster, executor driver, partition 7, PROCESS_LOCAL, 161870 bytes) 
+25/05/06 18:50:12 INFO Executor: Running task 1.0 in stage 8.0 (TID 65)
+25/05/06 18:50:12 INFO Executor: Running task 0.0 in stage 8.0 (TID 64)
+25/05/06 18:50:12 INFO Executor: Running task 2.0 in stage 8.0 (TID 66)
+25/05/06 18:50:12 INFO Executor: Running task 4.0 in stage 8.0 (TID 68)
+25/05/06 18:50:12 INFO Executor: Running task 7.0 in stage 8.0 (TID 71)
+25/05/06 18:50:12 INFO Executor: Running task 5.0 in stage 8.0 (TID 69)
+25/05/06 18:50:12 INFO Executor: Running task 3.0 in stage 8.0 (TID 67)
+25/05/06 18:50:12 INFO Executor: Running task 6.0 in stage 8.0 (TID 70)
+25/05/06 18:50:12 INFO PythonRunner: Times: total = 15, boot = -340, init = 352, finish = 3
+25/05/06 18:50:12 INFO PythonRunner: Times: total = 2, boot = -318, init = 319, finish = 1
+25/05/06 18:50:12 INFO PythonRunner: Times: total = 17, boot = -312, init = 328, finish = 1
+25/05/06 18:50:12 INFO PythonRunner: Times: total = 16, boot = -334, init = 348, finish = 2
+25/05/06 18:50:12 INFO PythonRunner: Times: total = 15, boot = -331, init = 344, finish = 2
+25/05/06 18:50:13 INFO PythonRunner: Times: total = 15, boot = -309, init = 323, finish = 1
+25/05/06 18:50:13 INFO PythonRunner: Times: total = 13, boot = -308, init = 320, finish = 1
+25/05/06 18:50:13 INFO PythonRunner: Times: total = 26, boot = -336, init = 361, finish = 1
+25/05/06 18:50:13 INFO ArrowPythonRunner: Times: total = 69, boot = -169, init = 233, finish = 5
+25/05/06 18:50:13 INFO Executor: Finished task 5.0 in stage 8.0 (TID 69). 4144 bytes result sent to driver
+25/05/06 18:50:13 INFO TaskSetManager: Finished task 5.0 in stage 8.0 (TID 69) in 118 ms on cnode002.cm.cluster (executor driver) (1/8)
+25/05/06 18:50:13 INFO ArrowPythonRunner: Times: total = 79, boot = -175, init = 249, finish = 5
+25/05/06 18:50:13 INFO ArrowPythonRunner: Times: total = 51, boot = -137, init = 184, finish = 4
+25/05/06 18:50:13 INFO Executor: Finished task 6.0 in stage 8.0 (TID 70). 4157 bytes result sent to driver
+25/05/06 18:50:13 INFO TaskSetManager: Finished task 6.0 in stage 8.0 (TID 70) in 139 ms on cnode002.cm.cluster (executor driver) (2/8)
+25/05/06 18:50:13 INFO ArrowPythonRunner: Times: total = 67, boot = -130, init = 192, finish = 5
+25/05/06 18:50:13 INFO Executor: Finished task 2.0 in stage 8.0 (TID 66). 4201 bytes result sent to driver
+25/05/06 18:50:13 INFO ArrowPythonRunner: Times: total = 59, boot = -127, init = 180, finish = 6
+25/05/06 18:50:13 INFO Executor: Finished task 4.0 in stage 8.0 (TID 68). 4303 bytes result sent to driver
+25/05/06 18:50:13 INFO Executor: Finished task 3.0 in stage 8.0 (TID 67). 5657 bytes result sent to driver
+25/05/06 18:50:13 INFO TaskSetManager: Finished task 2.0 in stage 8.0 (TID 66) in 150 ms on cnode002.cm.cluster (executor driver) (3/8)
+25/05/06 18:50:13 INFO TaskSetManager: Finished task 4.0 in stage 8.0 (TID 68) in 150 ms on cnode002.cm.cluster (executor driver) (4/8)
+25/05/06 18:50:13 INFO TaskSetManager: Finished task 3.0 in stage 8.0 (TID 67) in 150 ms on cnode002.cm.cluster (executor driver) (5/8)
+25/05/06 18:50:13 INFO ArrowPythonRunner: Times: total = 79, boot = -140, init = 213, finish = 6
+25/05/06 18:50:13 INFO Executor: Finished task 7.0 in stage 8.0 (TID 71). 5739 bytes result sent to driver
+25/05/06 18:50:13 INFO TaskSetManager: Finished task 7.0 in stage 8.0 (TID 71) in 151 ms on cnode002.cm.cluster (executor driver) (6/8)
+25/05/06 18:50:13 INFO ArrowPythonRunner: Times: total = 90, boot = -188, init = 274, finish = 4
+25/05/06 18:50:13 INFO Executor: Finished task 1.0 in stage 8.0 (TID 65). 4173 bytes result sent to driver
+25/05/06 18:50:13 INFO TaskSetManager: Finished task 1.0 in stage 8.0 (TID 65) in 163 ms on cnode002.cm.cluster (executor driver) (7/8)
+25/05/06 18:50:13 INFO ArrowPythonRunner: Times: total = 84, boot = -129, init = 208, finish = 5
+25/05/06 18:50:13 INFO Executor: Finished task 0.0 in stage 8.0 (TID 64). 4028 bytes result sent to driver
+25/05/06 18:50:13 INFO TaskSetManager: Finished task 0.0 in stage 8.0 (TID 64) in 168 ms on cnode002.cm.cluster (executor driver) (8/8)
+25/05/06 18:50:13 INFO TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+25/05/06 18:50:13 INFO DAGScheduler: ResultStage 8 (toPandas at /umbc/rs/is789sp25/users/hbai1/data/xgboost-spark-native.py:80) finished in 0.174 s
+25/05/06 18:50:13 INFO DAGScheduler: Job 5 is finished. Cancelling potential speculative or zombie tasks for this job
+25/05/06 18:50:13 INFO TaskSchedulerImpl: Killing all running tasks in stage 8: Stage finished
+25/05/06 18:50:13 INFO DAGScheduler: Job 5 finished: toPandas at /umbc/rs/is789sp25/users/hbai1/data/xgboost-spark-native.py:80, took 0.179555 s
+25/05/06 18:50:13 INFO SparkContext: SparkContext is stopping with exitCode 0.
+25/05/06 18:50:13 INFO SparkUI: Stopped Spark web UI at http://cnode002.cm.cluster:4040
+25/05/06 18:50:13 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+25/05/06 18:50:13 INFO MemoryStore: MemoryStore cleared
+25/05/06 18:50:13 INFO BlockManager: BlockManager stopped
+25/05/06 18:50:13 INFO BlockManagerMaster: BlockManagerMaster stopped
+25/05/06 18:50:13 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+25/05/06 18:50:13 INFO SparkContext: Successfully stopped SparkContext
+25/05/06 18:50:14 INFO ShutdownHookManager: Shutdown hook called
+25/05/06 18:50:14 INFO ShutdownHookManager: Deleting directory /tmp/spark-8db4295b-8166-4558-886d-1b6185e68f68
+25/05/06 18:50:14 INFO ShutdownHookManager: Deleting directory /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858
+25/05/06 18:50:14 INFO ShutdownHookManager: Deleting directory /tmp/spark-b082dbd5-aabb-4ea2-9e20-8fb13e34c858/pyspark-140f1d54-6ab4-412c-b9d9-00f6844baa8e

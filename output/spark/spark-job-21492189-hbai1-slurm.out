@@ -1,0 +1,16 @@
+🐍 Python: /home/hbai1/.conda/envs/sparkxgb/bin/python
+✅ XGBoost is available!
+Picked up _JAVA_OPTIONS: -Xmx2048m
+Picked up _JAVA_OPTIONS: -Xmx2048m
+25/05/06 17:40:44 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Exception in thread "main" org.apache.spark.SparkException: Failed to get main class in JAR with error 'File file:/umbc/rs/is789sp25/users/hbai1/data/  does not exist'.  Please specify one with --class.
+	at org.apache.spark.deploy.SparkSubmit.error(SparkSubmit.scala:1047)
+	at org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:528)
+	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:964)
+	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:194)
+	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:217)
+	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:91)
+	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1120)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1129)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+/cm/local/apps/slurm/var/spool/job21492189/slurm_script: line 35: --packages: command not found
