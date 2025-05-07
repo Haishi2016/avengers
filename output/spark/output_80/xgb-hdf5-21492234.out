@@ -1,9 +1,0 @@
-[INFO] Starting training at: Tue May  6 22:22:03 EDT 2025
-<Client: 'tcp://127.0.0.1:39056' processes=4 threads=8, memory=64.00 GiB>
-[INFO] Loading .h5 file...
-[RESULT] RMSE: 190467.799
-[RESULT] MAE : 134947.080
-[RESULT] R²  : 0.898
-[INFO] Time taken: 8.08 seconds
-[INFO] Finished at: Tue May  6 22:22:31 EDT 2025
-[INFO] Time taken: 28 seconds
