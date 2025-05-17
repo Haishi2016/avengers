@@ -11,19 +11,19 @@
 #SBATCH --error=xgb-hdf5-%j.err
 #SBATCH --time=0:30:00
 
-# Load required modules
+
 module purge
 module load GCCcore/9.3.0
 module load Python/3.8.2-GCCcore-9.3.0
 
-# Activate your virtual environment
+
 source ~/is789sp25_user/project/xgb-env/bin/activate
 
 # Start timing
 start_time=$(date +%s)
 echo "[INFO] Starting training at: $(date)"
 
-# Run your updated Python script
+
 python xgb_dask_h5.py
 
 # End timing
