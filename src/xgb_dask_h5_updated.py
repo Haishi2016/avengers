@@ -38,12 +38,12 @@ def main():
     X = X[:min_len]
     y = y[:min_len]
 
-    # Clean NaNs
+    
     valid = np.isfinite(X).all(axis=1) & np.isfinite(y)
     X = X[valid]
     y = y[valid]
 
-    # Sample 20% to match Spark
+
     np.random.seed(42)
     idx = np.random.choice(len(X), int(1.0 * len(X)), replace=False)
     X = X[idx]
